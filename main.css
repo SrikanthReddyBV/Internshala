@@ -16,8 +16,47 @@
   flex-wrap: wrap;
   justify-content: space-between;
 }
+
 .footer_list_item a {
   text-decoration: none;
   color: inherit;
   line-height: 2;
+}
+
+#footer_bottom {
+  border-top: 1px solid #666;
+  padding-top: 24px;
+  padding-bottom: 40px;
+}
+#android_app_container {
+  display: inline-block;
+  color: #fff;
+  margin-right: 32px;
+  border: 1px solid #fff;
+  padding: 8px 12px;
+  border-radius: 4px;
+}
+#social_media_container {
+  display: inline-block;
+  font-size: 20px;
+}
+#social_media_container a {
+  display: inline-block;
+  font-size: 20px;
+  color: #fff;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+#copyright {
+  float: right;
+  margin-top: 10px;
+}
+.orange {
+  background-color: orange;
+  border-radius: 2px;
+  font-size: 15px;
+}
+.orange a {
+  text-decoration: none;
+  color: #fff;
 }

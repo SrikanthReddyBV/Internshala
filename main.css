@@ -1,3 +1,7 @@
+body {
+  font-family: "Open Sans", sans-serif;
+}
+
 .generic_footer {
   background-color: #333;
   color: #fff;
@@ -53,10 +57,127 @@
 }
 .orange {
   background-color: orange;
-  border-radius: 2px;
-  font-size: 15px;
+  border-radius: 5px;
 }
 .orange a {
   text-decoration: none;
   color: #fff;
+  font-size: 12px;
+}
+#reference {
+  min-height: 734px;
+  max-width: 956px;
+  margin-left: auto;
+  margin-right: auto;
+  border: solid black 2px;
+}
+#search_criteria_container {
+  width: 316px;
+  height: auto;
+  border: dashed green 2px;
+}
+#filters {
+  max-height: 580px;
+  overflow: auto;
+  border: 1px solid #eee;
+  width: 316px;
+  overflow-y: auto;
+  border-radius: 6px;
+  padding: 23px;
+  background: #fff;
+}
+#filter_logo {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.form_control {
+  display: block;
+}
+
+#regestration_container {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-between;
+}
+
+#freetext {
+  display: inline-block;
+  width: 100px;
+  height: 60px;
+  color: #fff;
+  background-image: url(https://internshala.com/static/images/registration/student/brush_stroke.svg);
+  background-size: contain;
+  vertical-align: middle;
+  padding: 2px 18px;
+  margin-left: -8px;
+  margin-right: -10px;
+}
+.heading_0 {
+  font-size: 44px;
+  line-height: 1.18181818;
+  font-weight: 700;
+}
+
+.heading_0 > h3 {
+  font-size: 24px;
+  line-height: 1.33333333;
+  font-weight: 600;
+}
+
+.features_container > .feature {
+  display: flex;
+  flex-direction: row;
+}
+
+#regestration_container_left {
+  padding-right: 143px;
+}
+#regestration_container_right {
+  width: 360px;
+  padding: 24px;
+  background: #fff;
+  box-shadow: 0 8px 16px rgb(0 0 0 / 8%);
+  border-radius: 6px;
+}
+#google_button_container {
+  background: #fff;
+  border-radius: 3px;
+  border: 1px solid #eee;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding: 11px 10px;
+  margin-bottom: 12px;
+}
+#google_content {
+  font-size: 14px;
+  padding: 0 8px;
+  color: #484848;
+}
+#google_or > p {
+  text-align: center;
+}
+#form_container {
+  display: flex;
+  flex-direction: column;
+}
+.reg_fields {
+  max-width: 250px;
+  min-height: 30px;
+  border: rgb(1, 128, 179) 2px solid;
+  border-radius: 5px;
+}
+#form_container > p a {
+  text-decoration: none;
+  color: rgb(1, 128, 179);
+}
+#signup_btn {
+  background-color: rgb(1, 128, 179);
+  border-radius: 5px;
+  border: none;
+  height: 40px;
+  color: #eee;
+  font-size: 20px;
 }

@@ -1,0 +1,23 @@
+.generic_footer {
+  background-color: #333;
+  color: #fff;
+  font-size: 14px;
+  font-family: "Open Sans", sans-serif;
+  margin: 0px;
+}
+
+.max-width-container {
+  max-width: 1224px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.footer_container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.footer_list_item a {
+  text-decoration: none;
+  color: inherit;
+  line-height: 2;
+}

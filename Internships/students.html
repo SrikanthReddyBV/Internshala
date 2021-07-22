@@ -12,12 +12,63 @@
       href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap"
       rel="stylesheet"
     />
+    <!--krishna  -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="../nev_bar_style.css" />
+    <!-- krishna -->
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
   </head>
   <body>
+    <!-- header/nav bar by krishna -->
+
+    <header>
+      <img
+        class="logo"
+        src="https://internshala.com/static/images/common/new_internshala_logo.svg"
+        alt="InternShala"
+      />
+      <nav>
+        <ul class="nav_links">
+          <li>
+            <a href="#">Internships</a>
+          </li>
+          <li>
+            <a href="#">Online Training <span id="headOffer">OFFER</span></a>
+          </li>
+          <li>
+            <a href="#">Freshers Job</a>
+          </li>
+        </ul>
+      </nav>
+      <a href="#" id="cta"> <button class="headingbutton">Login</button></a>
+      <a href="#" id="cta1">
+        <button class="headingbutton" id="register">Register</button></a
+      >
+    </header>
+    <!-- commenting to remove search bar -->
+    <!-- <div id="searchbox">
+      <input type="text" placeholder="What are you looking for?" />
+      <button id="searchIcon">
+        <i class="fa fa-search"></i>
+      </button>
+    </div> -->
+    <!-- commenting to remove search bar -->
+    <!-- <div class="header">
+      <div class="headinghead">
+        <div>Internship</div>
+        <div>Online Training</div>
+        <div>Freshers Job</div>
+      </div>
+    </div> -->
+
+    <!--         This is body of signup page        -->
+    <div style="margin-top: 30px"></div>
     <div class="max-width-container">
       <div id="regestration_container">
         <div id="regestration_container_left">
@@ -58,7 +109,7 @@
                 src="https://internshala.com/static/images/login/google_logo.png"
               />
             </div>
-            <div id="google_content">Signup With Google</div>
+            <div id="google_content"><a href="#">Signup With Google</a></div>
           </div>
 
           <div id="form_container">
@@ -66,13 +117,33 @@
               <div id="google_or"><p>OR</p></div>
             </div>
             <label for="email">Email</label>
-            <input id="email" name="email" class="reg_fields" />
+            <input
+              id="email"
+              name="email"
+              placeholder="john@xyz.com"
+              class="reg_fields"
+            />
             <label for="password">Password</label>
-            <input id="password" name="password" class="reg_fields" />
+            <input
+              id="password"
+              name="password"
+              placeholder="set a password"
+              class="reg_fields"
+            />
             <label for="firstname">First name</label>
-            <input id="firstname" name="firstname" class="reg_fields" />
+            <input
+              id="firstname"
+              name="firstname"
+              placeholder="your first name"
+              class="reg_fields"
+            />
             <label for="lastname">Last name</label>
-            <input id="lastname" name="lastname" class="reg_fields" />
+            <input
+              id="lastname"
+              name="lastname"
+              placeholder="your last name"
+              class="reg_fields"
+            />
             <p>
               By signing up you agree to
               <span><a href="#">Terms and Conditions</a></span>

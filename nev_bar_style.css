@@ -93,3 +93,63 @@ button {
   border-radius: 0 5px 5px 0;
   font-size: 24px;
 }
+
+#carasol {
+  margin: 30px;
+  width: 1052px;
+  height: 352px;
+  border-radius: 8px;
+  margin-bottom: 5px !important;
+}
+#slider {
+  text-align: center;
+  display: flex;
+}
+#dot > div {
+  height: 15px;
+  width: 15px;
+  border-radius: 10px;
+  background-color: #dddddd;
+  margin: 10px;
+}
+#dot {
+  display: flex;
+  justify-content: center;
+}
+
+#five {
+  width: 30px !important;
+  margin: 10px;
+  border-radius: 10px;
+  height: 15px;
+  background-color: #008bdc !important;
+}
+
+.slide {
+  justify-content: center;
+  align-items: center;
+
+  margin-top: 180px !important;
+}
+#button1 {
+  margin-left: 40px !important;
+}
+#button1,
+#btn2 {
+  background-color: #faf8f4;
+  color: rgb(109, 107, 107);
+  font-size: 30px;
+  border: none;
+  border-radius: 20px;
+  width: 40px;
+  height: 40px;
+}
+#carasol:hover {
+  box-shadow: 0.25px 0.5px 5px 2.5px rgb(165, 165, 165);
+}
+#btn2:hover {
+  box-shadow: 0.25px 0.5px 5px 2.5px rgb(165, 165, 165);
+}
+#button1:hover {
+  box-shadow: 0.25px 0.5px 5px 2.5px rgb(165, 165, 165);
+}

@@ -65,26 +65,30 @@ body {
   font-size: 12px;
 }
 #reference {
+  display: flex;
+  flex-direction: row;
   min-height: 734px;
   max-width: 956px;
   margin-left: auto;
   margin-right: auto;
-  border: solid black 2px;
+  /* border: solid black 2px; */
 }
 #search_criteria_container {
   width: 316px;
   height: auto;
-  border: dashed green 2px;
+  position: relative;
+  /* border: dashed green 2px; */
 }
 #filters {
-  max-height: 580px;
+  max-height: 500px;
   overflow: auto;
   border: 1px solid #eee;
-  width: 316px;
+  width: 240px;
   overflow-y: auto;
   border-radius: 6px;
   padding: 23px;
   background: #fff;
+  box-shadow: 0 8px 16px rgb(0 0 0 / 8%);
 }
 #filter_logo {
   display: flex;
@@ -172,6 +176,7 @@ body {
 #form_container > p a {
   text-decoration: none;
   color: rgb(1, 128, 179);
+  position: fixed;
 }
 #signup_btn {
   background-color: rgb(1, 128, 179);
@@ -180,4 +185,175 @@ body {
   height: 40px;
   color: #eee;
   font-size: 20px;
+}
+
+#signup_btn:hover {
+  height: 45px;
+  width: auto;
+}
+
+#internship_heading {
+  margin: 10px;
+  padding: 10px;
+  text-align: center;
+}
+
+/* For Filters */
+.form_control {
+  box-shadow: none;
+  padding: 11px;
+  background: #fff;
+  color: #484848;
+  border: 1px solid #ddd;
+  border-radius: 3px;
+  font-size: 14px;
+  height: 40px;
+  line-height: 1.14285714;
+  font-family: Inter, sans-serif;
+}
+
+label {
+  margin: 5px;
+  display: inline-block;
+}
+
+.flex_row {
+  display: flex;
+}
+
+#list_container {
+  flex: 1;
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: 0%;
+  max-width: 636px;
+}
+.intern_list_container {
+  /* border: #eee solid 2px; */
+  margin-left: 64px;
+  /* margin-right: 14px; */
+  padding: 10px;
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Toggle */
+
+/* The switch - the box around the slider */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 40px;
+  height: 20px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 17px;
+  width: 17px;
+  left: 2px;
+  bottom: 2px;
+  background-color: white;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+input:checked + .slider {
+  background-color: #2196f3;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196f3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(17px);
+  -ms-transform: translateX(17px);
+  transform: translateX(17px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 20px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+/* End of toggle */
+#for_dom {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  /* border: green solid 2px; */
+  max-height: 650px;
+  overflow: scroll;
+  overflow-x: hidden;
+  overflow-x: visible;
+}
+
+.dummy {
+  /* border: solid grey 3px; */
+  min-height: 250px;
+  box-shadow: 0 8px 16px rgb(0 0 0 / 8%);
+  padding: 20px;
+}
+
+.dummy > #top {
+  display: flex;
+  flex-direction: row;
+}
+.dummy > #top > #right {
+  flex-grow: 2;
+  align-items: flex-end;
+}
+.dummy > #top > #right > img {
+  margin-left: 70%;
+}
+.dummy > #details {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+.dummy > #tags {
+  display: flex;
+  flex-direction: row;
+  max-width: 70%;
+}
+
+.dummy > #tags div > h4 {
+  background: #ccc;
+  border-radius: 5px;
+  padding: 5px;
+}
+
+/* .dummy > #continue_btn {
+} */
+
+.dummy > #bottom {
+  display: flex;
+  flex-direction: row;
+}
+#internship_heading {
+  margin-left: 33%;
 }

@@ -315,3 +315,25 @@
     </div>
   </body>
 </html>
+
+<script>
+  var signup = document.getElementById("signup_btn");
+  signup.addEventListener("click", initiateSignup);
+
+  function initiateSignup() {
+    const email = document.getElementById("email").value;
+    const password = document.getElementById("password").value;
+    const firstname = document.getElementById("firstname").value;
+    const lastname = document.getElementById("lastname").value;
+
+    if (email == "" || password == "" || firstname == "" || lastname == "") {
+      alert("Enter all fields");
+      email.value = "";
+      password.value = "";
+      firstname.value = "";
+      lastname.value = "";
+    } else {
+      window.location.href = "student_dashboard.html";
+    }
+  }
+</script>

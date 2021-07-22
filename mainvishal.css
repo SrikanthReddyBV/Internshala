@@ -1,0 +1,253 @@
+/* <<< Style part >>> */
+/* Main div And first div Accordingly  */
+
+body {
+    color: #333;
+    font-family: Inter,sans-serif;
+    height: 100%;
+    font-size: 14px;
+    line-height: 1.57142857;
+    font-weight: 400;
+}
+#internships .section_description {
+    margin-bottom: 0;
+}
+.max-width-container {
+    max-width: 1224px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.container-fluid {
+    padding-left: 16px;
+    padding-right: 16px;
+}
+#internships .categories_container {
+    margin-top: 24px;
+    margin-bottom: 16px;
+}
+
+/* Side Text Color And Design */
+a {
+    font-weight: 500;
+    text-decoration: none;
+    color: #0ca1f1;
+    cursor: pointer;
+    line-height: 1.14285714;
+}
+
+*, ::after, ::before {
+    box-sizing: border-box;
+}
+p {
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+div {
+    display: block;
+}
+div h4{
+    font-size: 20px;
+}
+body {
+    font-family: 'Inter var',sans-serif;
+}
+.scrollable_cards .card_item:first-of-type {
+    margin-left: 1px;
+}
+.scrollable_cards .card_item {
+    display: flex;
+    padding: 16px 4px 24px;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 6px;
+    margin: 10px 7px;
+    width: 140px;
+    height: 156px;
+}
+.scrollable_cards .card_item .text {
+    font-family: Inter,sans-serif;
+    font-weight: 600;
+    /* font-weight: bold; */
+    color: #333;
+    text-align: center;
+    font-size: 16px;
+    line-height: 1.38;
+    margin-top: 16px;
+}
+.scrollable_cards .card_item .text {
+    font-family: 'Inter var',sans-serif;
+}
+.scrollable_cards >.card_item >.text:hover{
+    color: #008BDC;
+    /* border: 1px solid black; */
+}
+.scrollable_cards .card_item:hover {
+    box-shadow: 0.25px 0.5px 4px 2px rgb(238, 228, 228);
+    border-radius: 3px;
+}
+
+.scrollable_cards .card_item:last-of-type {
+    margin-right: 1px;
+}
+
+/* After div in left side the text */
+
+.view_all_cta_container_20_more {
+    text-align: center;
+    margin-top: 24px;
+}
+
+#trainings #trainings_container {
+  margin-top: 16px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+#trainings #trainings_container .card_item {
+  height: 172px;
+  padding: 16px 8px 18px;
+  margin: 10px 7px;
+}
+#trainings #trainings_container .card_item:first-of-type {
+  margin-left: 0;
+}
+#trainings #trainings_container .card_item:last-of-type {
+  margin-right: 0;
+}
+.section .section_description {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 16px;
+    margin-bottom: 0;
+    font-size: 18px;
+    line-height: 1.22;
+    color: #484848;
+}
+/* .categories_container{
+    border: 1px solid black;
+    display: flex;
+    flex-direction: row;
+} */
+.categories {
+    /* border: 1px solid black; */
+    display: flex;
+    flex-direction: row;
+}
+
+.scrollable_cards {
+    /* border: 1px solid black; */
+    display: flex;
+    flex-direction: row;
+}
+
+/* For left side buttons click */
+
+.section .section_description .view_all_cta {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.view_all_cta {
+    font-family: 'Inter var',sans-serif;
+}
+.view_all_cta {
+    display: flex;
+    justify-content: center;
+    min-width: 328px;
+    font-size: 16px;
+    line-height: 1.25;
+    font-family: Inter,sans-serif;
+    font-weight: 600;
+}
+
+/* For arrow buttom In every part*/
+
+.ic-24-arrow-right:after {
+  content: "";
+  display: inline-block !important;
+  width: 0;
+  height: 0;
+  border-left: 8px solid #0cadec;
+  border-top: 8px solid transparent;
+  border-bottom: 8px solid transparent;
+  vertical-align: middle;
+
+}
+
+.ic-24-arrow-right:before {
+  width: 8px;
+  height: 2px;
+  background: #0cadec;
+  content: "";
+  display: inline-block;
+  vertical-align: middle;
+}
+
+/* last div */
+
+.section:last-of-type {
+    padding-bottom: 104px;
+}
+.section {
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+.container-fluid {
+    padding-left: 16px;
+    padding-right: 16px;
+}
+.container-fluid, .container-lg, .container-md, .container-sm, .container-xl {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+*, ::after, ::before {
+    box-sizing: border-box;
+}
+
+div {
+    display: block;
+}
+#fresher_jobs_container {
+    /* border: 1px solid black; */
+    display: flex;
+    justify-content:space-around;
+    
+}
+#fresher_jobs #fresher_jobs_container .fresher_job_perk .img {
+    height: 88px;
+    width: 88px;
+}
+
+#fresher_jobs #fresher_jobs_container .fresher_job_perk .name {
+    font-size: 16px;
+    font-family: Inter,sans-serif;
+    font-weight: 600;
+    line-height: 1.25;
+    margin-top: 8px;
+    text-align: center;
+}
+#fresher_jobs #fresher_jobs_container .fresher_job_perk {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 24px 64px 32px;
+}
+#fresher_jobs .superscript {
+    background: #FF8C00;
+    border-radius: 3px;
+    color: #fff;
+    font-size: 18px;
+    font-family: Inter,sans-serif;
+    font-weight: 600;
+    padding: 4px 16px;
+    margin-left: 4px;
+    position: relative;
+    bottom: 4px;
+}

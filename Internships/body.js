@@ -183,11 +183,8 @@ var ArrData = [
 // pushed in localstorage
 localStorage.setItem("dataOfPage", JSON.stringify(ArrData));
 
-let data = JSON.parse(localStorage.getItem("dataOfPage"));
-console.log(data.filter(filterCity).filter(filterDomain));
-
 function filterCity(el) {
-  return el.location == "Bengaluru";
+  return el.location == selected_city.value;
 }
 
 function filterDomain(el) {
@@ -248,9 +245,53 @@ function showContent(input) {
       details_of_apl,
       viewdetails_down
     );
+
     container.append(main_div);
+  }
+  if (data.length == 0) {
+    container.innerHTML = "<h1>No Result found!</h1>";
   }
 }
 
 showContent(JSON.parse(localStorage.getItem("dataOfPage")));
+
 // pushed
+
+var city = document.getElementById("select_city");
+city.addEventListener("change", showRightSideContent);
+var domain = document.getElementById("select_category");
+domain.addEventListener("change", showRightSideContent);
+
+var wfm_check = document.getElementById("wfh_check");
+var pt_check = document.getElementById("pt_check");
+var total_internships = document.getElementById("internship_heading");
+var x = Math.round(Math.random() * 500);
+total_internships.innerText = `Total internships : ${x}`;
+pt_check.addEventListener("change", showRightSideContent);
+wfm_check.addEventListener("change", showRightSideContent);
+
+function showRightSideContent() {
+  let selectedOption = city.value;
+  let selectDomain = domain.value;
+
+  console.log(wfm_check.checked);
+  console.log(pt_check);
+
+  let data = JSON.parse(localStorage.getItem("dataOfPage"));
+  let mod = data.filter(function filterDomain(el) {
+    return el.domain == selectDomain;
+  });
+
+  showContent(mod);
+  console.log(selectDomain);
+
+  let modified = mod.filter(function filterCity(el) {
+    return el.location == selectedOption;
+  });
+  if (wfm_check.checked || pt_check.checked) {
+    modified.pop();
+  }
+
+  showContent(modified);
+  total_internships.innerText = `Total internships : ${modified.length}`;
+}

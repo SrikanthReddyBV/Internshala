@@ -83,11 +83,13 @@
                       data-placeholder="e.g Marketing"
                       class="form_control"
                     >
-                      <option>Accounts</option>
-                      <option>Web Development</option>
-                      <option>Data Science</option>
-                      <option>Android Development</option>
-                      <option>Big Data</option>
+                      <option value="Accounts">Accounts</option>
+                      <option value="Web Development">Web Development</option>
+                      <option value="Data Science">Data Science</option>
+                      <option value="Android Development">
+                        Android Development
+                      </option>
+                      <option value="Big Data">Big Data</option>
                     </select>
                   </div>
                 </div>
@@ -104,12 +106,12 @@
                       class="form_control"
                       onselect="cityselect()"
                     >
-                      <option>Hyderabad</option>
-                      <option>Bengaluru</option>
-                      <option>Chennai</option>
-                      <option>Mumbai</option>
-                      <option>Delhi</option>
-                      <option>Pune</option>
+                      <option value="Hydrabad">Hyderabad</option>
+                      <option value="Bengaluru">Bengaluru</option>
+                      <option value="Chennai">Chennai</option>
+                      <option value="Mumbai">Mumbai</option>
+                      <option value="Delhi">Delhi</option>
+                      <option value="Pune">Pune</option>
                     </select>
                   </div>
                 </div>
@@ -312,7 +314,7 @@
 </html>
 <script src="body.js"></script>
 
-<script>
+<!-- <script>
   var wfm_check = document.getElementById("wfh_check");
   var pt_check = document.getElementById("pt_check");
   var selected_cat = document.getElementById("select_category");
@@ -337,11 +339,10 @@
     // });
 
     console.log(ArrData);
-
     console.log(selected_city.value);
     console.log(selected_cat.value);
     console.log(wfm_check.checked);
     console.log(pt_check.checked);
     total_internships.innerText = `Total internships : ${x}`;
   }
-</script>
+</script> -->

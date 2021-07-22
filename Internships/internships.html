@@ -25,6 +25,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <style></style>
   </head>
   <body>
     <!-- Header -->
@@ -146,56 +147,7 @@
 
         <!-- For right side internships -->
         <div id="list_container">
-          <div id="for_dom">
-            <div class="dummy">
-              <div id="top">
-                <div id="left">
-                  <h3>Web Development</h3>
-                  <h5>Tads Education Pvt Ltd</h5>
-                </div>
-                <div id="right">
-                  <img
-                    src="https://internshala.com/cached_uploads/logo%2F60d8182213bec1624774690.png"
-                  />
-                </div>
-              </div>
-              <p>Location : Bangalore</p>
-              <div id="details">
-                <div>
-                  <a>Start Date<a><br>
-                  <a>Immidiate</a>
-                </div>
-                <div>
-                   <a>Duration<a><br>
-                  <a>3 months</a>
-                </div>
-                <div>
-                   <a>Stipend<a><br>
-                  <a>10,000 per month</a>
-                </div>
-                <div>
-                   <a>Apply By<a><br>
-                  <a>ASAP</a>
-                </div>
-              </div>
-              <div id="bottom">
-              <div id="tags">
-                <div><h4>put tags here</h4> </div>
-              </div>
-              <div id="continue_btn">
-                <h4>continue</h4>
-              </div>
-              </div>
-              
-            </div>
-            <div class="dummy">b</div>
-            <div class="dummy">c</div>
-            <div class="dummy">d</div>
-            <div class="dummy">e</div>
-            <div class="dummy">f</div>
-            <div class="dummy">g</div>
-            <div class="dummy">h</div>
-          </div>
+          <div id="for_dom"></div>
         </div>
       </div>
     </div>
@@ -358,6 +310,7 @@
     </div>
   </body>
 </html>
+<script src="body.js"></script>
 
 <script>
   var wfm_check = document.getElementById("wfh_check");
@@ -373,6 +326,18 @@
   wfm_check.addEventListener("change", showRightSideContent);
 
   function showRightSideContent() {
+    let data = JSON.parse(localStorage.getItem("dataOfPage"));
+    if (valueselected_city.value == "Bengaluru") {
+      data.filter(filterCity).filter(filterDomain);
+      showContent(data);
+    }
+
+    // data.filter(function filterCity(el) {
+    //   el.location == city;
+    // });
+
+    console.log(ArrData);
+
     console.log(selected_city.value);
     console.log(selected_cat.value);
     console.log(wfm_check.checked);

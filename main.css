@@ -317,9 +317,52 @@ input:checked + .slider:before {
   min-height: 250px;
   box-shadow: 0 8px 16px rgb(0 0 0 / 8%);
   padding: 20px;
+  display: flex;
+  flex-direction: column;
+  flex-basis: auto;
+}
+/* styling for all box created dynamically */
+.company_img {
+  width: 50px;
+  height: 50px;
+  float: right;
+  margin-top: 10px;
+  margin-right: 10px;
+}
+.location_box {
+  margin-bottom: 20px !important;
+  font-weight: bold;
+}
+.details_of_apl {
+  display: flex;
+  justify-content: space-around;
+}
+.industry {
+  margin-top: 30px !important;
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+}
+.company_name_box {
+  margin-bottom: 20px !important;
+  color: grey;
+  cursor: pointer;
+}
+.viewdetails_down {
+  margin-top: 40px !important;
+  margin-left: auto;
+  color: #2196f3;
+  text-decoration: underline;
+  cursor: pointer;
+}
+.viewdetails_down:hover {
+  color: #088af5;
+  font-weight: bolder;
 }
 
-.dummy > #top {
+/* ends here */
+
+/* .dummy > #top {
   display: flex;
   flex-direction: row;
 }
@@ -350,10 +393,10 @@ input:checked + .slider:before {
 /* .dummy > #continue_btn {
 } */
 
-.dummy > #bottom {
+/* .dummy > #bottom {
   display: flex;
   flex-direction: row;
-}
+} */
 #internship_heading {
   margin-left: 33%;
 }

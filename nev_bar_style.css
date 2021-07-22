@@ -143,6 +143,7 @@ button {
   border-radius: 20px;
   width: 40px;
   height: 40px;
+  cursor: pointer;
 }
 #carasol:hover {
   box-shadow: 0.25px 0.5px 5px 2.5px rgb(165, 165, 165);

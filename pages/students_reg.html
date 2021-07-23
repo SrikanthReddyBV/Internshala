@@ -28,11 +28,13 @@
     <!-- header/nav bar by krishna -->
 
     <header>
-      <img
-        class="logo"
-        src="https://internshala.com/static/images/common/new_internshala_logo.svg"
-        alt="InternShala"
-      />
+      <a class="logo" href="../index.html">
+        <img
+          class="logo"
+          src="https://internshala.com/static/images/common/new_internshala_logo.svg"
+          alt="InternShala"
+        />
+      </a>
       <nav>
         <ul class="nav_links">
           <li>
@@ -360,7 +362,7 @@
       };
       let isNew = true;
       for (var i = 0; i < reg_std_db.length; i++) {
-        if ((reg_std_db[i].email = email.value)) {
+        if (reg_std_db[i].email == email.value) {
           isNew = false;
           alert("User already exist! Please Login");
           window.location.href = "students_log.html";

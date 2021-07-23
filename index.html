@@ -41,11 +41,13 @@
     <!--  Krishna's Work starts here -->
 
     <header>
-      <img
-        class="logo"
-        src="https://internshala.com/static/images/common/new_internshala_logo.svg"
-        alt="InternShala"
-      />
+      <a class="logo" href="#">
+        <img
+          class="logo"
+          src="https://internshala.com/static/images/common/new_internshala_logo.svg"
+          alt="InternShala"
+        />
+      </a>
       <nav>
         <ul class="nav_links">
           <li>
@@ -650,13 +652,16 @@
     </div>
   </body>
 </html>
+
+<!-- For Home Search bar  (edit done by srikanth)     -->
 <script>
   var searchbox = document.getElementById("home_search");
   var btn = document.getElementById("searchIcon");
   btn.addEventListener("click", function () {
-    dummy(searchbox.value);
+    let temp = {
+      searched_item: searchbox.value,
+    };
+    localStorage.setItem("homesearch", JSON.stringify(temp));
+    window.location.href = "pages/internships.html";
   });
-
-  console.log(searchbox, btn);
 </script>
-<script src="js/body.js"></script>

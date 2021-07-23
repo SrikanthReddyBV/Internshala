@@ -253,7 +253,7 @@ function showContent(input) {
   }
 }
 
-showContent(JSON.parse(localStorage.getItem("dataOfPage")));
+// showContent(JSON.parse(localStorage.getItem("dataOfPage")));
 
 // pushed
 
@@ -281,6 +281,8 @@ function showRightSideContent() {
   let mod = data.filter(function filterDomain(el) {
     return el.domain == selectDomain;
   });
+  // console.log(data);
+  // console.log(mod);
 
   showContent(mod);
   console.log(selectDomain);
@@ -296,7 +298,19 @@ function showRightSideContent() {
   total_internships.innerText = `Total internships : ${modified.length}`;
 }
 
-function dummy(x) {
-  alert(x);
-  window.location.href = "pages/internships.html";
+// for testing purpose only. edit made by srikanth
+
+if (localStorage.getItem("homesearch") != null) {
+  let e = JSON.parse(localStorage.getItem("homesearch")).searched_item;
+
+  let data = JSON.parse(localStorage.getItem("dataOfPage"));
+  let modified = data.filter(function (el) {
+    return el.location == e || el.domain == e;
+  });
+
+  showContent(modified);
+
+  localStorage.removeItem("homesearch");
+} else {
+  showContent(JSON.parse(localStorage.getItem("dataOfPage")));
 }

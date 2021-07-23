@@ -1,10 +1,10 @@
 function slideshow() {
   let slider = [
-    "get_set_intern_2021-1920-5bb08e.png",
-    "learn_with_me-1920-5da5b0.png",
+    "images/get_set_intern_2021-1920-5bb08e.png",
+    "images/learn_with_me-1920-5da5b0.png",
 
-    "social_issue_camapign_jul21-1920-b70cf7.png",
-    "year_specific_21-1920-d0c72f.png",
+    "images/social_issue_camapign_jul21-1920-b70cf7.png",
+    "images/year_specific_21-1920-d0c72f.png",
   ];
 
   let div = document.getElementById("slider");

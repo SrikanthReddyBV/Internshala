@@ -12,7 +12,7 @@
     <!-- Script moved into respective div -->
     <!-- Krishna's scripts ends here -->
 
-    <link rel="stylesheet" href="main.css" />
+    <link rel="stylesheet" href="css/main.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -25,16 +25,17 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
-    <link rel="stylesheet" href="nev_bar_style.css" />
+    <link rel="stylesheet" href="css/nev_bar_style.css" />
     <!-- Krishna's styles ends here -->
 
     <!-- Vishal's style starts here -->
-    <link rel="stylesheet" href="mainvishal.css" />
+    <link rel="stylesheet" href="css/mainvishal.css" />
     <!-- Vishal's style ends here -->
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <link rel="icon" href="https://internshala.com//favicon.ico?v=5" />
+    <title>Home</title>
   </head>
   <body>
     <!--  Krishna's Work starts here -->
@@ -48,7 +49,7 @@
       <nav>
         <ul class="nav_links">
           <li>
-            <a href="#">Internships</a>
+            <a href="pages/internships.html">Internships</a>
           </li>
           <li>
             <a href="#">Online Training <span id="headOffer">OFFER</span></a>
@@ -58,14 +59,20 @@
           </li>
         </ul>
       </nav>
-      <a href="#" id="cta"> <button class="headingbutton">Login</button></a>
-      <a href="#" id="cta1">
+      <a href="pages/students_log.html" id="cta">
+        <button class="headingbutton">Login</button></a
+      >
+      <a href="pages/students_reg.html" id="cta1">
         <button class="headingbutton" id="register">Register</button></a
       >
     </header>
 
     <div id="searchbox">
-      <input type="text" placeholder="What are you looking for?" />
+      <input
+        id="home_search"
+        type="text"
+        placeholder="What are you looking for?"
+      />
       <button id="searchIcon">
         <i class="fa fa-search"></i>
       </button>
@@ -80,7 +87,7 @@
     </div>
 
     <div id="dot"></div>
-    <script src="nev_bar.js"></script>
+    <script src="js/nev_bar.js"></script>
 
     <!-- Krishna's work ends here -->
 
@@ -649,3 +656,13 @@
     </div>
   </body>
 </html>
+<script>
+  var searchbox = document.getElementById("home_search");
+  var btn = document.getElementById("searchIcon");
+  btn.addEventListener("click", function () {
+    dummy(searchbox.value);
+  });
+
+  console.log(searchbox, btn);
+</script>
+<script src="js/body.js"></script>

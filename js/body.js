@@ -237,7 +237,7 @@ function showContent(input) {
                   ASAP
                 </div>`;
 
-    viewdetails_down.innerHTML = `View Details >`;
+    viewdetails_down.innerHTML = `<a href="details.html">View Details ></a>`;
     main_div.append(
       upper_div_with_img,
       company_name_box,
@@ -294,4 +294,9 @@ function showRightSideContent() {
 
   showContent(modified);
   total_internships.innerText = `Total internships : ${modified.length}`;
+}
+
+function dummy(x) {
+  alert(x);
+  window.location.href = "pages/internships.html";
 }

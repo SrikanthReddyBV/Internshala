@@ -5,7 +5,7 @@
       src="https://kit.fontawesome.com/a13b999530.js"
       crossorigin="anonymous"
     ></script>
-    <link rel="stylesheet" href="../main.css" />
+    <link rel="stylesheet" href="../css/main.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -17,7 +17,7 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
-    <link rel="stylesheet" href="../nev_bar_style.css" />
+    <link rel="stylesheet" href="../css/nev_bar_style.css" />
     <!-- krishna -->
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -321,12 +321,17 @@
   signup.addEventListener("click", initiateSignup);
 
   function initiateSignup() {
-    const email = document.getElementById("email").value;
-    const password = document.getElementById("password").value;
-    const firstname = document.getElementById("firstname").value;
-    const lastname = document.getElementById("lastname").value;
+    const email = document.getElementById("email");
+    const password = document.getElementById("password");
+    const firstname = document.getElementById("firstname");
+    const lastname = document.getElementById("lastname");
 
-    if (email == "" || password == "" || firstname == "" || lastname == "") {
+    if (
+      email.value == "" ||
+      password.value == "" ||
+      firstname.value == "" ||
+      lastname.value == ""
+    ) {
       alert("Enter all fields");
       email.value = "";
       password.value = "";

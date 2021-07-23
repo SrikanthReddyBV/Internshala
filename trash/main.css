@@ -352,7 +352,7 @@ input:checked + .slider:before {
   margin-top: 40px !important;
   margin-left: auto;
   color: #2196f3;
-  text-decoration: underline;
+  text-decoration: none;
   cursor: pointer;
 }
 .viewdetails_down:hover {

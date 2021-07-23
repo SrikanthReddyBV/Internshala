@@ -289,6 +289,10 @@
       alert("Enter all fields");
     } else {
       let reg_std_db = JSON.parse(localStorage.getItem("reg_std_db"));
+      if (reg_std_db == null) {
+        alert("db is empty signup first");
+        window.location.href = "students_reg.html";
+      }
       for (let i = 0; i < reg_std_db.length; i++) {
         if (
           reg_std_db[i].email == email.value &&
@@ -296,6 +300,8 @@
         ) {
           isTrue = true;
           alert("Login Success!");
+          email.value = "";
+          password.value = "";
         }
       }
       if (!isTrue) {

@@ -35,6 +35,117 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" href="https://internshala.com//favicon.ico?v=5" />
+
+    <!-- pop -->
+    <style>
+      /* #boxing {
+        margin: 0px;
+        padding: 0px;
+        box-sizing: border-box;
+      } */
+      /* body {
+        background: linear-gradient(to right, #3a7bd5, #3a6073);
+        font-family: "Raleway", sans-serif;
+        height: 100vh;
+      } */
+      .center {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+      .center button {
+        padding: 10px 20px;
+        font-size: 15px;
+        font-weight: 600;
+        color: #222;
+        background: #f5f5f5;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        border-radius: 5px;
+      }
+      .popup {
+        position: absolute;
+        top: -150%;
+        left: 50%;
+        opacity: 0;
+        transform: translate(-50%, -50%) scale(1.25);
+        width: 380px;
+        padding: 20px 30px;
+        background: #fff;
+        box-shadow: 2px 2px 5px 5px rgba(0, 0, 0, 0.15);
+        border-radius: 10px;
+        transition: top 0ms ease-in-out 200ms, opacity 200ms ease-in-out 0ms,
+          transform 200ms ease-in-out 0ms;
+      }
+      .popup.active {
+        top: 50%;
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(1);
+        transition: top 0ms ease-in-out 0ms, opacity 200ms ease-in-out 0ms,
+          transform 200ms ease-in-out 0ms;
+      }
+      .popup .close-btn {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        width: 15px;
+        height: 15px;
+        background: #888;
+        color: #eee;
+        text-align: center;
+        line-height: 15px;
+        border-radius: 15px;
+        cursor: pointer;
+      }
+      .popup .form h2 {
+        text-align: center;
+        color: #222;
+        margin: 10px 0px 20px;
+        font-size: 25px;
+      }
+      .popup .form .form-element {
+        margin: 15px 0px;
+      }
+      .popup .form .form-element label {
+        font-size: 14px;
+        color: #222;
+      }
+      .popup .form .form-element input[type="text"],
+      .popup .form .form-element input[type="password"] {
+        margin-top: 5px;
+        display: block;
+        width: 100%;
+        padding: 10px;
+        outline: none;
+        border: 1px solid #aaa;
+        border-radius: 5px;
+      }
+      .popup .form .form-element input[type="checkbox"] {
+        margin-right: 5px;
+      }
+      .popup .form .form-element button {
+        width: 100%;
+        height: 40px;
+        border: none;
+        outline: none;
+        font-size: 16px;
+        background: #222;
+        color: #f5f5f5;
+        border-radius: 10px;
+        cursor: pointer;
+      }
+      .popup .form .form-element a {
+        display: block;
+        text-align: right;
+        font-size: 15px;
+        color: #1a79ca;
+        text-decoration: none;
+        font-weight: 600;
+      }
+    </style>
+    <!-- end pop -->
     <title>Home</title>
   </head>
   <body>
@@ -59,8 +170,8 @@
           </li>
         </ul>
       </nav>
-      <a href="pages/students_log.html" id="cta">
-        <button class="headingbutton">Login</button></a
+      <a href="#" id="cta">
+        <button class="headingbutton" id="show-login">Login</button></a
       >
       <a href="pages/students_reg.html" id="cta1">
         <button class="headingbutton" id="register">Register</button></a
@@ -98,7 +209,10 @@
         <h2>Internships</h2>
         <p class="section_description">
           Apply to 10,000+ internships for free
-          <a class="view_all_cta" href="pages/internships.html">
+          <a
+            class="view_all_cta"
+            href="/internships?utm_campaign=HP_all_internships"
+          >
             View all internships <i class="ic-24-arrow-right"></i>
           </a>
         </p>
@@ -109,7 +223,7 @@
           <div class="categories scrollable_cards">
             <a
               class="internship_card card_item home_tile_city"
-              href="pages/internships.html"
+              href="/internships/work-from-home-jobs?utm_campaign=HP_City_WFH"
             >
               <div class="img">
                 <img
@@ -121,7 +235,7 @@
             </a>
             <a
               class="internship_card card_item home_tile_city"
-              href="pages/internships.html"
+              href="/internships/internship-in-delhi%20ncr?utm_campaign=HP_City_DelhiNCR"
             >
               <div class="img">
                 <img
@@ -133,7 +247,7 @@
             </a>
             <a
               class="internship_card card_item home_tile_city"
-              href="pages/internships.html"
+              href="/internships/internship-in-bangalore?utm_campaign=HP_City_Bangalore"
             >
               <div class="img">
                 <img
@@ -145,7 +259,7 @@
             </a>
             <a
               class="internship_card card_item home_tile_city"
-              href="pages/internships.html"
+              href="/internships/internship-in-mumbai?utm_campaign=HP_City_Mumbai"
             >
               <div class="img">
                 <img
@@ -157,7 +271,7 @@
             </a>
             <a
               class="internship_card card_item home_tile_city"
-              href="pages/internships.html"
+              href="/internships/internship-in-hyderabad?utm_campaign=HP_City_Hyderabad"
             >
               <div class="img">
                 <img
@@ -169,7 +283,7 @@
             </a>
             <a
               class="internship_card card_item home_tile_city"
-              href="pages/internships.html"
+              href="/internships/internship-in-chennai?utm_campaign=HP_City_Chennai"
             >
               <div class="img">
                 <img
@@ -181,7 +295,7 @@
             </a>
             <a
               class="internship_card card_item home_tile_city"
-              href="pages/internships.html"
+              href="/internships/internship-in-kolkata?utm_campaign=HP_City_Kolkata"
             >
               <div class="img">
                 <img
@@ -193,7 +307,7 @@
             </a>
             <a
               class="internship_card card_item home_tile_city"
-              href="pages/internships.html"
+              href="/internships/international-internship?utm_campaign=HP_City_International"
             >
               <div class="img">
                 <img
@@ -212,7 +326,7 @@
           <div class="categories scrollable_cards">
             <a
               class="internship_card card_item home_tile_category"
-              href="pages/internships.html"
+              href="/internships/part-time-jobs?utm_campaign=HP_Category_Parttime"
             >
               <div class="img">
                 <img
@@ -224,7 +338,7 @@
             </a>
             <a
               class="internship_card card_item home_tile_category"
-              href="pages/internships.html"
+              href="/internships/engineering-internship?utm_campaign=HP_Category_Eng"
             >
               <div class="img">
                 <img
@@ -236,7 +350,7 @@
             </a>
             <a
               class="internship_card card_item home_tile_category"
-              href="pages/internships.html"
+              href="/internships/ngo-internship?utm_campaign=HP_Category_NGO"
             >
               <div class="img">
                 <img
@@ -248,7 +362,7 @@
             </a>
             <a
               class="internship_card card_item home_tile_category"
-              href="pages/internships.html"
+              href="/internships/mba-internship?utm_campaign=HP_Category_MBA"
             >
               <div class="img">
                 <img
@@ -260,7 +374,7 @@
             </a>
             <a
               class="internship_card card_item home_tile_category"
-              href="pages/internships.html"
+              href="/internships/graphic-design-internship?utm_campaign=HP_Category_Design"
             >
               <div class="img">
                 <img
@@ -272,7 +386,7 @@
             </a>
             <a
               class="internship_card card_item home_tile_category"
-              href="pages/internships.html"
+              href="/internships/science-internship?utm_campaign=HP_Category_Science"
             >
               <div class="img">
                 <img
@@ -284,7 +398,7 @@
             </a>
             <a
               class="internship_card card_item home_tile_category"
-              href="pages/internships.html"
+              href="/internships/media-internship?utm_campaign=HP_Category_Media"
             >
               <div class="img">
                 <img
@@ -296,7 +410,7 @@
             </a>
             <a
               class="internship_card card_item home_tile_category"
-              href="pages/internships.html"
+              href="/internships/humanities-internship?utm_campaign=HP_Category_Humanities"
             >
               <div class="img">
                 <img
@@ -320,7 +434,7 @@
               class="view_all_cta"
               target="_blank"
               rel="noopener"
-              href="pages/internships.html"
+              href="https://trainings.internshala.com/?utm_source=is_web_IS-home-midsection_web_all"
             >
               View all trainings<i class="ic-24-arrow-right"></i>
             </a>
@@ -328,7 +442,7 @@
 
           <div id="trainings_container" class="scrollable_cards">
             <a
-              href="pages/internships.html"
+              href="https://trainings.internshala.com/python-training?utm_source=is_web_IS-home-midsection_web1&amp;utm_campaign=HP_City_WFH"
               class="card_item"
               target="_blank"
               rel="noopener"
@@ -342,7 +456,7 @@
               <div class="text">Programming with Python</div>
             </a>
             <a
-              href="pages/internships.html"
+              href="https://trainings.internshala.com/digital-marketing-training?utm_source=is_web_IS-home-midsection_web2&amp;utm_campaign=HP_City_WFH"
               class="card_item"
               target="_blank"
               rel="noopener"
@@ -356,7 +470,7 @@
               <div class="text">Digital Marketing</div>
             </a>
             <a
-              href="pages/internships.html"
+              href="https://trainings.internshala.com/web-development-training?utm_source=is_web_IS-home-midsection_web3&amp;utm_campaign=HP_City_WFH"
               class="card_item"
               target="_blank"
               rel="noopener"
@@ -370,7 +484,7 @@
               <div class="text">Web Development</div>
             </a>
             <a
-              href="pages/internships.html"
+              href="https://trainings.internshala.com/machine-learning-training?utm_source=is_web_IS-home-midsection_web4&amp;utm_campaign=HP_City_WFH"
               class="card_item"
               target="_blank"
               rel="noopener"
@@ -384,7 +498,7 @@
               <div class="text">Machine Learning</div>
             </a>
             <a
-              href="pages/internships.html"
+              href="https://trainings.internshala.com/excel-training?utm_source=is_web_IS-home-midsection_web5&amp;utm_campaign=HP_City_WFH"
               class="card_item"
               target="_blank"
               rel="noopener"
@@ -398,7 +512,7 @@
               <div class="text">Advanced Excel</div>
             </a>
             <a
-              href="pages/internships.html"
+              href="https://trainings.internshala.com/hacking-training?utm_source=is_web_IS-home-midsection_web6&amp;utm_campaign=HP_City_WFH"
               class="card_item"
               target="_blank"
               rel="noopener"
@@ -412,7 +526,7 @@
               <div class="text">Ethical Hacking</div>
             </a>
             <a
-              href="pages/internships.html"
+              href="https://trainings.internshala.com/autocad-training?utm_source=is_web_IS-home-midsection_web7&amp;utm_campaign=HP_City_WFH"
               class="card_item"
               target="_blank"
               rel="noopener"
@@ -426,7 +540,7 @@
               <div class="text">AutoCAD</div>
             </a>
             <a
-              href="pages/internships.html"
+              href="https://trainings.internshala.com/creative-writing-training?utm_source=is_web_IS-home-midsection_web8&amp;utm_campaign=HP_City_WFH"
               class="card_item"
               target="_blank"
               rel="noopener"
@@ -451,7 +565,10 @@
           <h2>Fresher Jobs <span class="superscript">New</span></h2>
           <p class="section_description">
             Premium fresher jobs on your fingertips
-            <a class="view_all_cta" href="pages/internships.html">
+            <a
+              class="view_all_cta"
+              href="/fresher-jobs?utm_campaign=HP_all_jobs"
+            >
               View all jobs <i class="ic-24-arrow-right"></i>
             </a>
           </p>
@@ -648,6 +765,35 @@
         </div>
       </div>
     </div>
+
+    <!-- pop code -->
+
+    <div class="popup">
+      <div class="close-btn">&times;</div>
+      <div class="form">
+        <h2>Log in</h2>
+        <div class="form-element">
+          <label for="email">Email</label>
+          <input type="text" id="email" placeholder="Enter email" />
+        </div>
+        <div class="form-element">
+          <label for="password">Password</label>
+          <input type="password" id="password" placeholder="Enter password" />
+        </div>
+        <div class="form-element">
+          <input type="checkbox" id="remember-me" />
+          <label for="remember-me">Remember me</label>
+        </div>
+        <div class="form-element">
+          <button>Sign in</button>
+        </div>
+        <div class="form-element">
+          <a href="#">Forgot password?</a>
+        </div>
+      </div>
+    </div>
+
+    <!--  -->
   </body>
 </html>
 <script>
@@ -660,3 +806,15 @@
   console.log(searchbox, btn);
 </script>
 <script src="js/body.js"></script>
+
+<!-- pop -->
+<script>
+  document.querySelector("#show-login").addEventListener("click", function () {
+    document.querySelector(".popup").classList.add("active");
+  });
+  document
+    .querySelector(".popup .close-btn")
+    .addEventListener("click", function () {
+      document.querySelector(".popup").classList.remove("active");
+    });
+</script>

@@ -1,0 +1,156 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter&display=swap");
+header {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 5px;
+  font-weight: bolder;
+
+  box-shadow: 0 2px 3px -1px rgba(0, 0, 0, 0.1);
+}
+
+.nav_links > li,
+a,
+button {
+  font-family: "Inter var", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  color: #484848;
+  text-decoration: none;
+  margin-right: 5px;
+}
+#register {
+  background-color: #008bde;
+  color: white;
+}
+
+.logo {
+  cursor: pointer;
+  margin-top: 0;
+  margin-right: auto;
+}
+
+.nav_links {
+  list-style: none;
+}
+.nav_links li {
+  display: inline-block;
+  padding: 0 20px;
+}
+.nav_links li a:hover {
+  color: #008bde;
+}
+
+.headingbutton {
+  padding: 9px 25px;
+  color: #008bde;
+  border: 1px solid #008bde;
+  background-color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.headingbutton:hover {
+  color: #0082d4;
+  box-shadow: 0 2px 3px -1px rgba(0, 0, 0, 0.1);
+}
+#register:hover {
+  background-color: #0082d4;
+}
+#headOffer {
+  background-color: #ff8c00;
+  color: white;
+  font-size: 12px;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+#searchbox {
+  padding: 20px;
+  justify-content: center;
+
+  display: flex;
+}
+#searchbox > input {
+  height: 45px;
+  width: 500px;
+  padding: 0px 10px;
+  border: 1px solid rgb(201, 201, 201);
+  border-radius: 0.25px;
+  font-size: 18px;
+}
+#searchIcon {
+  color: white;
+  background-color: #008bde;
+  padding: 5px;
+
+  width: 45px;
+  border: 1px solid #008bde;
+
+  cursor: pointer;
+  border-radius: 0 5px 5px 0;
+  font-size: 24px;
+}
+
+#carasol {
+  margin: 30px;
+  width: 1052px;
+  height: 352px;
+  border-radius: 8px;
+  margin-bottom: 5px !important;
+}
+#slider {
+  text-align: center;
+  display: flex;
+}
+#dot > div {
+  height: 15px;
+  width: 15px;
+  border-radius: 10px;
+  background-color: #dddddd;
+  margin: 10px;
+}
+#dot {
+  display: flex;
+  justify-content: center;
+}
+
+#five {
+  width: 30px !important;
+  margin: 10px;
+  border-radius: 10px;
+  height: 15px;
+  background-color: #008bdc !important;
+}
+
+.slide {
+  justify-content: center;
+  align-items: center;
+
+  margin-top: 180px !important;
+}
+#button1 {
+  margin-left: 40px !important;
+}
+#button1,
+#btn2 {
+  background-color: #faf8f4;
+  color: rgb(109, 107, 107);
+  font-size: 30px;
+  border: none;
+  border-radius: 20px;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+}
+#carasol:hover {
+  box-shadow: 0.25px 0.5px 5px 2.5px rgb(165, 165, 165);
+}
+#btn2:hover {
+  box-shadow: 0.25px 0.5px 5px 2.5px rgb(165, 165, 165);
+}
+#button1:hover {
+  box-shadow: 0.25px 0.5px 5px 2.5px rgb(165, 165, 165);
+}

@@ -191,6 +191,11 @@ body {
   height: 40px;
   color: #eee;
   font-size: 20px;
+  cursor: pointer;
+}
+#login_btn:hover {
+  background-color: rgb(13, 168, 230);
+  font-size: 25px;
 }
 
 #signup_btn:hover {

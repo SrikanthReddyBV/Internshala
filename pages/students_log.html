@@ -23,7 +23,8 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <link rel="icon" href="https://internshala.com//favicon.ico?v=5" />
+    <title>Internshala|login</title>
   </head>
   <body>
     <!-- header/nav bar by krishna -->
@@ -37,7 +38,7 @@
         />
       </a>
       <nav>
-        <ul class="nav_links">
+        <ul class="nav_links" id="navigationkkk">
           <li>
             <a href="internships.html">Internships</a>
           </li>
@@ -322,7 +323,7 @@
     } else {
       let reg_std_db = JSON.parse(localStorage.getItem("reg_std_db"));
       if (reg_std_db == null) {
-        alert("db is empty signup first");
+        alert("Please signup first");
         window.location.href = "students_reg.html";
       }
       for (let i = 0; i < reg_std_db.length; i++) {
@@ -332,6 +333,27 @@
         ) {
           isTrue = true;
           alert("Login Success!");
+          let btn1 = document.getElementById("cta");
+          let btn2 = document.getElementById("cta1");
+          let name = document.createElement("li");
+          let anc1 = document.createElement("a");
+          console.log(anc1);
+          let signout = document.createElement("li");
+          let addItInNevbar = document.getElementById("navigationkkk");
+          console.log(addItInNevbar);
+          localStorage.setItem(
+            "nameOfPerson",
+            JSON.stringify([reg_std_db[i].firstname, reg_std_db[i].lastname])
+          );
+
+          btn1.style.display = "none";
+          btn2.style.display = "none";
+          anc1.href = "https://learn.masaischool.com/app/dashboard";
+          name.innerHTML = reg_std_db[i].firstname;
+          signout.innerHTML = "Sign Out";
+          anc1.append(signout);
+          anc1.setAttribute("id", "signOut");
+          addItInNevbar.append(name, anc1);
           email.value = "";
           password.value = "";
           popnow(); // calls popnow function if login successful

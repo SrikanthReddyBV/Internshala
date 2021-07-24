@@ -22,6 +22,10 @@ button {
   text-decoration: none;
   margin-right: 5px;
 }
+
+#signOut:hover {
+  color: #008bde;
+}
 #register {
   background-color: #008bde;
   color: white;

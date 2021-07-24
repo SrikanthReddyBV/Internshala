@@ -309,6 +309,7 @@ if (localStorage.getItem("homesearch") != null) {
   });
 
   showContent(modified);
+  total_internships.innerText = `Total internships : ${modified.length}`;
 
   localStorage.removeItem("homesearch");
 } else {

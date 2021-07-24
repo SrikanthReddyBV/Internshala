@@ -7,7 +7,7 @@
     <title>pop up</title>
     <style>
         .main{
-        border:1px solid black;
+        /* border:1px solid black; */
         width: 680px;
         height:620px;
         margin:auto;
@@ -40,8 +40,9 @@
         </style>
 </head>
 <body >
-    <div class="main">
-        <button type="button" style="width:25px;height:25px;float:right;font-size:15px;font-weight:bold;text-align:center" data-dismiss="alert">&times;</button>
+    <div class="main" id="sks">
+        <div style="border:1px solid black">
+        <button type="button" id="sri" style="width:25px;height:25px;float:right;font-size:15px;font-weight:bold;text-align:center" data-dismiss="alert">&times;</button>
         <div id="first">
           <div class="alert"></div>
             <img  style="padding-top:10px;width:50px;height:50px"src="https://lh3.googleusercontent.com/proxy/otVkLB40UwXUEsTXXNICB6FJbkjkQjgZe_9d_BtZf693PHY5u7vkwAQm-goRzPYyM2crIUAGvxdkZZlDeqxfNT8n3esAlfbwa4Gyfjr4_2QcRaZgyk9FyW1YXIyuUoLPS8RP3yWXg1HKUumzMX9A5Y8kiZDNm4A">
@@ -55,11 +56,28 @@
         </div>
         <h1></h1>
         <div class="com">
-            <h5 style="text-align:center;font-weight: 400px;font-size:13px; color:white">Go  back to the main page
-                </h5>
+            <button onClick="redirect()" style="text-align:center;padding-top:30px;font-weight: 400px;font-size:13px; color:black">Go  back to the main page
+            </button>
+            </div>
             </div>
      
     </div>
     
 </body>
 </html>
+<script>
+    var sks=document.getElementById("sks");
+    var sri=document.getElementById("sri");
+    sri.addEventListener("click",function(){
+        sks.innerHTML=null;
+           });
+        function redirect()
+    {
+        alert("sks");
+    var url = "";
+    window.location(url);
+    }
+        
+ 
+
+</script>

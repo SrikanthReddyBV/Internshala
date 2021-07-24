@@ -30,8 +30,8 @@
 </head>
 <body >
     <div class="main" id="sks">
-        <div style="border:1px solid black">
-        <button type="button" id="sri" style="width:25px;height:25px;float:right;font-size:15px;font-weight:bold;text-align:center" data-dismiss="alert">&times;</button>
+        <div style="border:1px solid white;">
+        <button type="button" id="sri" style="background-color:#57bcff;color:white;width:25px;height:25px;float:right;font-size:15px;font-weight:bold;text-align:center;border-radius: 5px;border: 1px solid #57bcff;" data-dismiss="alert">&times;</button>
         <div id="first">
           <div class="alert"></div>
             <img  style="padding-top:10px;width:50px;height:50px"src="https://png.pngitem.com/pimgs/s/302-3024380_tick-symbol-light-blue-hd-png-download.png">
@@ -45,7 +45,7 @@
         </div>
         <h1></h1>
         <div class="com">
-            <button onClick="redirect()" style="width:180px;height: 40px;border-radius:100px;margin-top:20px;border:1px solid black;background-color:#57bcff;margin:auto;padding-bottom:15px ;text-align:center;padding-top:10px;font-weight: 400px;font-size:13px; color:black">Go  back to the main page
+            <button onClick="redirect()" style="width:180px;height: 40px;border-radius:50px;border:1px solid black;margin-top:20px;background-color:#57bcff;margin:auto;padding-bottom:15px ;text-align:center;padding-top:10px;font-weight: 400px;font-size:13px; color:white">Go  back to the main page
             </button>
             </div>
             </div>
@@ -60,13 +60,11 @@
     sri.addEventListener("click",function(){
         sks.innerHTML=null;
            });
-        function redirect()
-    {
-        
+    function redirect()
+    {   
     var url = "index.html";
-    window.location(url);
+    window.location.href=url;
     }
-        
  
 
 </script>

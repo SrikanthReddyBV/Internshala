@@ -3,7 +3,7 @@ This is a clone of Internshal website. Internshala is an internship and online t
 
 ## Sample screenshot
 
-![Sample screenshot](/image/screenshot.png "Home page screenshot")
+![Sample screenshot](/images/screenshot.png "Home page screenshot")
 
 ## Technologies used
 * HTML

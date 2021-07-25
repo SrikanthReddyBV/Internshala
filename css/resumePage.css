@@ -1,0 +1,125 @@
+/* Resume page Css By Vishal */
+
+.body1 {
+  margin: 0;
+  padding: 0;
+  background-color: #fff;
+  font-family: "Inter var", sans-serif;
+  color: #333;
+  /* border: 1px solid black;  */
+}
+
+h1 {
+  margin: 0;
+  font-weight: 600;
+}
+
+h2 {
+  margin: 0;
+  font-weight: 400;
+  display: inline-block;
+  line-height: 22px;
+}
+
+.box {
+  background: #fff;
+  width: 50rem;
+  padding: 3rem;
+  margin: 1rem auto;
+  border-radius: 0.5rem;
+}
+
+.header {
+  display: grid;
+  grid-template-columns: 40% 60%;
+}
+
+.header-left {
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  font-size: 2rem;
+}
+
+.first-name {
+  font-weight: 400;
+  margin: 0;
+}
+.last-name {
+  font-weight: 200;
+  margin: 0;
+}
+
+.header-right {
+  width: 100%;
+  display: grid;
+  justify-items: end;
+}
+
+.header-right p {
+  display: inline-block;
+  line-height: 22px;
+}
+
+.grey {
+  background: #5db7eb;
+  color: #fff;
+  padding: 0.7rem;
+  border-radius: 0.3rem;
+  line-height: 22px;
+}
+
+.icon {
+  color: rgb(223, 223, 223);
+  font-size: 1.5rem;
+  margin-right: 0.5rem;
+}
+
+table {
+  border: 2px solid #5db7eb;
+  margin: 1rem 0 1rem 0;
+  width: 100%;
+  text-align: center;
+  border-collapse: collapse;
+}
+
+td,
+th {
+  border: 1px solid #000;
+  padding: 0.4rem;
+}
+p {
+  line-height: 22px;
+  color: #333;
+  font-size: 18px;
+}
+.buttons_container {
+  display: flex;
+  justify-content: center;
+  margin-top: 16px;
+  align-items: center;
+  flex-direction: row;
+}
+.btn {
+  background-color: #5db7eb;
+  color: #fff;
+  height: 50px;
+  width: 200px;
+  border-radius: 8px;
+  font-size: 20px;
+  font-family: "Inter var", sans-serif;
+  font-weight: bold;
+  cursor: pointer;
+}
+.tag {
+  height: 20px;
+  width: 100px;
+  background-color: #5db7eb;
+  text-align: center;
+  border-radius: 10px;
+  padding-top: 10px;
+  color: #fff;
+  font-size: 15px;
+  margin: 5px;
+  cursor: pointer;
+}

@@ -1,0 +1,437 @@
+body {
+  font-family: "Open Sans", sans-serif;
+}
+
+.generic_footer {
+  background-color: #333;
+  color: #fff;
+  font-size: 14px;
+  font-family: "Open Sans", sans-serif;
+  margin: 0px;
+}
+
+.max-width-container {
+  max-width: 1224px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.footer_container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.footer_list_item a {
+  text-decoration: none;
+  color: inherit;
+  line-height: 2;
+}
+
+#footer_bottom {
+  border-top: 1px solid #666;
+  padding-top: 24px;
+  padding-bottom: 40px;
+}
+#android_app_container {
+  display: inline-block;
+  color: #fff;
+  margin-right: 32px;
+  border: 1px solid #fff;
+  padding: 8px 12px;
+  border-radius: 4px;
+}
+#social_media_container {
+  display: inline-block;
+  font-size: 20px;
+}
+#social_media_container a {
+  display: inline-block;
+  font-size: 20px;
+  color: #fff;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+#copyright {
+  float: right;
+  margin-top: 10px;
+}
+.orange {
+  background-color: #ff8c00;
+  border-radius: 5px;
+}
+.orange a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 12px;
+}
+#reference {
+  display: flex;
+  flex-direction: row;
+  min-height: 734px;
+  max-width: 956px;
+  margin-left: auto;
+  margin-right: auto;
+  /* border: solid black 2px; */
+}
+#search_criteria_container {
+  width: 316px;
+  height: auto;
+  position: relative;
+  /* border: dashed green 2px; */
+}
+#filters {
+  max-height: 500px;
+  overflow: auto;
+  border: 1px solid #eee;
+  width: 240px;
+  overflow-y: auto;
+  border-radius: 6px;
+  padding: 23px;
+  background: #fff;
+  box-shadow: 0 8px 16px rgb(0 0 0 / 8%);
+}
+#filter_logo {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.form_control {
+  display: block;
+}
+
+#regestration_container {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-between;
+}
+
+#freetext {
+  display: inline-block;
+  width: 100px;
+  height: 60px;
+  color: #fff;
+  background-image: url(https://internshala.com/static/images/registration/student/brush_stroke.svg);
+  background-size: contain;
+  vertical-align: middle;
+  padding: 2px 18px;
+  margin-left: -8px;
+  margin-right: -10px;
+}
+.heading_0 {
+  font-size: 44px;
+  line-height: 1.18181818;
+  font-weight: 700;
+}
+
+.heading_0 > h3 {
+  font-size: 24px;
+  line-height: 1.33333333;
+  font-weight: 600;
+}
+
+.features_container > .feature {
+  display: flex;
+  flex-direction: row;
+}
+
+#regestration_container_left {
+  padding-right: 143px;
+}
+#regestration_container_right {
+  width: 360px;
+  padding: 24px;
+  background: #fff;
+  box-shadow: 0 8px 16px rgb(0 0 0 / 8%);
+  border-radius: 6px;
+}
+#google_button_container {
+  background: #fff;
+  border-radius: 3px;
+  border: 1px solid #eee;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding: 11px 10px;
+  margin-bottom: 12px;
+}
+#google_content {
+  font-size: 14px;
+  padding: 0 8px;
+  color: #484848;
+}
+#google_or > p {
+  text-align: center;
+}
+#form_container {
+  display: flex;
+  flex-direction: column;
+}
+.reg_fields {
+  max-width: 99%;
+  min-height: 30px;
+  border: grey 2px solid;
+  border-radius: 5px;
+}
+
+.reg_fields:hover {
+  border: rgb(1, 128, 179) 2px solid;
+}
+
+#form_container > p a {
+  text-decoration: none;
+  color: rgb(1, 128, 179);
+  /* position: fixed;    <--- Removed this thing to fix signup page floating terms */
+}
+#signup_btn,
+#login_btn {
+  background-color: rgb(1, 128, 179);
+  border-radius: 5px;
+  border: none;
+  height: 40px;
+  color: #eee;
+  font-size: 20px;
+  cursor: pointer;
+}
+#login_btn:hover {
+  background-color: rgb(13, 168, 230);
+  font-size: 25px;
+}
+
+#signup_btn:hover {
+  height: 45px;
+  width: auto;
+}
+
+#internship_heading {
+  margin: 10px;
+  padding: 10px;
+  text-align: center;
+}
+
+/* For Filters */
+.form_control {
+  box-shadow: none;
+  padding: 11px;
+  background: #fff;
+  color: #484848;
+  border: 1px solid #ddd;
+  border-radius: 3px;
+  font-size: 14px;
+  height: 40px;
+  line-height: 1.14285714;
+  font-family: Inter, sans-serif;
+}
+
+label {
+  margin: 5px;
+  display: inline-block;
+}
+
+.flex_row {
+  display: flex;
+}
+
+#list_container {
+  flex: 1;
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: 0%;
+  max-width: 636px;
+}
+.intern_list_container {
+  /* border: #eee solid 2px; */
+  margin-left: 64px;
+  /* margin-right: 14px; */
+  padding: 10px;
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Toggle */
+
+/* The switch - the box around the slider */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 40px;
+  height: 20px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 17px;
+  width: 17px;
+  left: 2px;
+  bottom: 2px;
+  background-color: white;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+input:checked + .slider {
+  background-color: #2196f3;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196f3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(17px);
+  -ms-transform: translateX(17px);
+  transform: translateX(17px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 20px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+/* End of toggle */
+#for_dom {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  /* border: green solid 2px; */
+  max-height: 650px;
+  overflow: scroll;
+  overflow-x: hidden;
+  overflow-x: visible;
+}
+
+.dummy {
+  /* border: solid grey 3px; */
+  min-height: 250px;
+  box-shadow: 0 8px 16px rgb(0 0 0 / 8%);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  flex-basis: auto;
+}
+/* styling for all box created dynamically */
+.company_img {
+  width: 50px;
+  height: 50px;
+  float: right;
+  margin-top: 10px;
+  margin-right: 10px;
+}
+.location_box {
+  margin-bottom: 20px !important;
+  font-weight: bold;
+}
+.details_of_apl {
+  display: flex;
+  justify-content: space-around;
+}
+.industry {
+  margin-top: 30px !important;
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+}
+.company_name_box {
+  margin-bottom: 20px !important;
+  color: grey;
+  cursor: pointer;
+}
+.viewdetails_down {
+  margin-top: 40px !important;
+  margin-left: auto;
+  color: #2196f3;
+  text-decoration: none;
+  cursor: pointer;
+}
+.viewdetails_down > a {
+  color: #2196f3;
+  text-decoration: none;
+}
+.viewdetails_down > a:hover {
+  color: #088af5;
+  font-weight: bolder;
+}
+
+/* ends here */
+
+/* .dummy > #top {
+  display: flex;
+  flex-direction: row;
+}
+.dummy > #top > #right {
+  flex-grow: 2;
+  align-items: flex-end;
+}
+.dummy > #top > #right > img {
+  margin-left: 70%;
+}
+.dummy > #details {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+.dummy > #tags {
+  display: flex;
+  flex-direction: row;
+  max-width: 70%;
+}
+
+.dummy > #tags div > h4 {
+  background: #ccc;
+  border-radius: 5px;
+  padding: 5px;
+}
+
+/* .dummy > #continue_btn {
+} */
+
+/* .dummy > #bottom {
+  display: flex;
+  flex-direction: row;
+} */
+#internship_heading {
+  margin-left: 33%;
+}
+
+/* For Login Page */
+.login_wrap {
+  position: relative;
+  z-index: 0;
+  margin: 32px auto;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  padding: 24px;
+  background: #fff;
+}
+#login_container {
+  max-width: 400px;
+  margin: 64px auto 48px;
+}
+#first_last {
+  display: flex;
+  flex-direction: row;
+  flex-basis: auto;
+}

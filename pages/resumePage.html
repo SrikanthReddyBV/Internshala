@@ -5,19 +5,10 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="icon" href="https://internshala.com//favicon.ico?v=5" />
-        
-        <!-- Style css part -->
         <link rel="stylesheet" href="../css/resumePage.css" />
-        <!-- Header Part Css -->
-        <link rel="stylesheet" href="../css/nev_bar_style.css" />
-        <!-- Footer Part Css -->
+        <link rel="stylesheet" href="../css/nev_bar_style.css" /> 
         <link rel="stylesheet" href="../css/main.css" />
-       
-        <!-- Pop css -->
          <link rel="stylesheet" href="../css/pop.css" />
-
-        <!-- Font Awesome (Icons)-->
-
         <script src="https://kit.fontawesome.com/996973c893.js"></script>
 
         <title>Student Resume</title>
@@ -156,14 +147,6 @@
             </div>
             <hr />
             <div class="buttons_container">
-                <!-- <a href="#" >
-                    <button class="btn">
-                        Save</button>
-                </a>
-                <a href="#" >
-                    <button class="btn">
-                        Review </button>
-                </a> -->
                 <a href="#" >
                     <button class="btn" id="applynow">
                         Apply now </button>
@@ -335,24 +318,11 @@
       <div class="close-btn">&times;</div>
       <div class="form">
         <h2 style="color: #088af5;">Successfully applied !</h2>
-        <div class="form-element">
-          <!-- <label for="email">Email</label> -->
-          <!-- <input type="file" id="resume" placeholder="Choose file" /> -->
+        <div class="form-element"> 
         </div>
-        <!-- <div class="form-element">
-          <label for="password">Password</label>
-          <input type="password" id="password" placeholder="Enter password" />
-        </div> -->
-        <!-- <div class="form-element">
-          <input type="checkbox" id="remember-me" />
-          <label for="remember-me">Remember me</label>
-        </div> -->
         <div class="form-element">
           <button id="home_page">Go to Homepage</button>
         </div>
-        <!-- <div class="form-element">
-          <a href="#">Forgot password?</a>
-        </div> -->
       </div>
     </div>
 
@@ -361,84 +331,4 @@
     
     </html>
 
-    <script>
-        // written by srikanth
-
-      
-
-
-
-     
-      let applynow = document.getElementById("applynow");
-      let signout = document.getElementById("signout")
-
-      applynow.addEventListener("click",function(){
-          popnow();
-      })
-
-      signout.addEventListener("click",function(){
-          window.location.href = "../index.html";
-      })
-
-    function popnow() {
-    document.querySelector(".popup").classList.add("active");
-    document
-      .querySelector(".popup .close-btn")
-      .addEventListener("click", function () {
-        document.querySelector(".popup").classList.remove("active");
-      });
-
-    // test
-    let resume_submit = document.getElementById("home_page");
-    resume_submit.addEventListener("click", function () {
-      window.location.href = "../index.html";
-    });
-  }
-    function setName(){
-        let getName = JSON.parse(localStorage.getItem("nameOfPerson"))
-        console.log(getName)
-        
-        let btn1 = document.getElementById("cta");
-          let btn2 = document.getElementById("cta1");
-            btn1.style.display = "none";
-          btn2.style.display = "none";
-          let name = document.createElement("li");
-          let anc1 = document.createElement("a");
-          console.log(anc1);
-          let signout = document.createElement("li");
-          let addItInNevbar = document.getElementById("navigationkkk");
-          console.log(addItInNevbar);
-          
-
-          
-          anc1.href = "../index.html";
-          name.innerHTML = getName[0]
-          signout.innerHTML = "Sign Out";
-          anc1.append(signout);
-          anc1.setAttribute("id", "signOut");
-          addItInNevbar.append(name, anc1);
-
-          let firstName =document.getElementById("firstNameR");
-          let lastName =document.getElementById("lastNameR")
-          firstName.innerHTML = getName[0]
-          lastName.innerHTML = getName[1]
-
-          let email = document.getElementById("emailResume");
-          let linkedin = document.getElementById("linkedinResume");
-          let github = document.getElementById("gitHubResume");
-
-          email.innerHTML = `${getName[1]}.${getName[0]}@masaischool.com`
-          linkedin.innerHTML =`linkedin.com/in/${getName[0]}-${getName[1]}/`
-          github.innerHTML =`github.com/${getName[1]}_${getName[0]}`
-
-         
-
-
-
-         localStorage.removeItem("nameOfPerson")
-
-    }
-    setName()
-    
-
-    </script>
+   <script src="../js/resumePage.js"></script>

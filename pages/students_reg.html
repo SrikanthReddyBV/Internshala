@@ -5,6 +5,7 @@
       src="https://kit.fontawesome.com/a13b999530.js"
       crossorigin="anonymous"
     ></script>
+
     <link rel="stylesheet" href="../css/main.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -12,21 +13,18 @@
       href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap"
       rel="stylesheet"
     />
-    <!--krishna  -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
     <link rel="stylesheet" href="../css/nev_bar_style.css" />
-    <!-- krishna -->
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
   </head>
   <body>
-    <!-- header/nav bar by krishna -->
-
+    <!-- header/nav bar -->
     <header>
       <a class="logo" href="../index.html">
         <img
@@ -55,21 +53,6 @@
         <button class="headingbutton" id="register">Register</button></a
       >
     </header>
-    <!-- commenting to remove search bar -->
-    <!-- <div id="searchbox">
-      <input type="text" placeholder="What are you looking for?" />
-      <button id="searchIcon">
-        <i class="fa fa-search"></i>
-      </button>
-    </div> -->
-    <!-- commenting to remove search bar -->
-    <!-- <div class="header">
-      <div class="headinghead">
-        <div>Internship</div>
-        <div>Online Training</div>
-        <div>Freshers Job</div>
-      </div>
-    </div> -->
 
     <!--         This is body of signup page        -->
     <div style="margin-top: 30px"></div>
@@ -324,64 +307,4 @@
   </body>
 </html>
 
-<script>
-  var signup = document.getElementById("signup_btn");
-  signup.addEventListener("click", initiateSignup);
-
-  function initiateSignup() {
-    const email = document.getElementById("email");
-    const password = document.getElementById("password");
-    const firstname = document.getElementById("firstname");
-    const lastname = document.getElementById("lastname");
-
-    if (
-      email.value == "" ||
-      password.value == "" ||
-      firstname.value == "" ||
-      lastname.value == ""
-    ) {
-      alert("Enter all fields");
-      email.value = "";
-      password.value = "";
-      firstname.value = "";
-      lastname.value = "";
-    } else {
-      let arr = [];
-      let reg_std_db = JSON.parse(localStorage.getItem("reg_std_db"));
-      if (reg_std_db == null) {
-        localStorage.setItem("reg_std_db", JSON.stringify(arr));
-      }
-
-      // console.log(bla);
-      console.log(reg_std_db);
-      let temp = {
-        password: "",
-        email: "",
-        firstname: "",
-        lastname: "",
-      };
-      let isNew = true;
-      for (var i = 0; i < reg_std_db.length; i++) {
-        if (reg_std_db[i].email == email.value) {
-          isNew = false;
-          alert("User already exist! Please Login");
-          window.location.href = "students_log.html";
-        }
-      }
-
-      if (isNew) {
-        temp.email = email.value;
-        temp.password = password.value;
-        temp.firstname = firstname.value;
-        temp.lastname = lastname.value;
-
-        reg_std_db.push(temp);
-        console.log(reg_std_db);
-        localStorage.setItem("reg_std_db", JSON.stringify(reg_std_db));
-
-        alert("Signup Success! Please login");
-        window.location.href = "students_log.html";
-      }
-    }
-  }
-</script>
+<script src="../js/students_reg.js"></script>

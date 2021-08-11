@@ -13,13 +13,11 @@
       rel="stylesheet"
     />
 
-    <!-- Krishna's styles starts here -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
     <link rel="stylesheet" href="../css/nev_bar_style.css" />
-    <!-- Krishna's styles ends here -->
 
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -33,11 +31,11 @@
 
     <header>
       <a class="logo" href="../index.html">
-      <img
-        class="logo"
-        src="https://internshala.com/static/images/common/new_internshala_logo.svg"
-        alt="InternShala"
-      />
+        <img
+          class="logo"
+          src="https://internshala.com/static/images/common/new_internshala_logo.svg"
+          alt="InternShala"
+        />
       </a>
       <nav>
         <ul class="nav_links">
@@ -319,36 +317,3 @@
   </body>
 </html>
 <script src="../js/body.js"></script>
-
-<!-- <script>
-  var wfm_check = document.getElementById("wfh_check");
-  var pt_check = document.getElementById("pt_check");
-  var selected_cat = document.getElementById("select_category");
-  var selected_city = document.getElementById("select_city");
-  var total_internships = document.getElementById("internship_heading");
-  var x = Math.round(Math.random() * 500);
-
-  selected_city.addEventListener("change", showRightSideContent);
-  selected_cat.addEventListener("change", showRightSideContent);
-  pt_check.addEventListener("change", showRightSideContent);
-  wfm_check.addEventListener("change", showRightSideContent);
-
-  function showRightSideContent() {
-    let data = JSON.parse(localStorage.getItem("dataOfPage"));
-    if (valueselected_city.value == "Bengaluru") {
-      data.filter(filterCity).filter(filterDomain);
-      showContent(data);
-    }
-
-    // data.filter(function filterCity(el) {
-    //   el.location == city;
-    // });
-
-    console.log(ArrData);
-    console.log(selected_city.value);
-    console.log(selected_cat.value);
-    console.log(wfm_check.checked);
-    console.log(pt_check.checked);
-    total_internships.innerText = `Total internships : ${x}`;
-  }
-</script> -->

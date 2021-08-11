@@ -5,13 +5,6 @@
       src="https://kit.fontawesome.com/a13b999530.js"
       crossorigin="anonymous"
     ></script>
-
-    <!-- Krishna's scripts starts here -->
-
-    <!-- <script src="nev_bar.js"></script> -->
-    <!-- Script moved into respective div -->
-    <!-- Krishna's scripts ends here -->
-
     <link rel="stylesheet" href="css/main.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -19,18 +12,12 @@
       href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap"
       rel="stylesheet"
     />
-
-    <!-- Krishna's styles starts here -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
     <link rel="stylesheet" href="css/nev_bar_style.css" />
-    <!-- Krishna's styles ends here -->
-
-    <!-- Vishal's style starts here -->
     <link rel="stylesheet" href="css/mainvishal.css" />
-    <!-- Vishal's style ends here -->
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -38,8 +25,6 @@
     <title>Home</title>
   </head>
   <body>
-    <!--  Krishna's Work starts here -->
-
     <header>
       <a class="logo" href="#">
         <img
@@ -653,15 +638,4 @@
   </body>
 </html>
 
-<!-- For Home Search bar  (edit made by srikanth)     -->
-<script>
-  var searchbox = document.getElementById("home_search");
-  var btn = document.getElementById("searchIcon");
-  btn.addEventListener("click", function () {
-    let temp = {
-      searched_item: searchbox.value,
-    };
-    localStorage.setItem("homesearch", JSON.stringify(temp));
-    window.location.href = "pages/internships.html";
-  });
-</script>
+<script src="./js/search.js"></script>

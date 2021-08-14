@@ -88,6 +88,7 @@ var ArrData = [
       "https://internshala.com/cached_uploads/logo%2F5e2fddf3b08e21580195315.jpeg",
     location: "Delhi",
     name: "Ladder India",
+    type: "work from home",
   },
   {
     amount: "7000",
@@ -97,6 +98,7 @@ var ArrData = [
       "https://internshala.com/cached_uploads/logo%2F604862c5e22a21615356613.png",
     location: "Pune",
     name: "Digitise Today",
+    type: "part time",
   },
   {
     amount: "10000",
@@ -169,6 +171,7 @@ var ArrData = [
       "https://internshala.com/cached_uploads/logo%2F5e2fdedf15b561580195551.png",
     location: "Mumbai",
     name: "Oddy Labs",
+    type: "part time",
   },
   {
     amount: "8900",
@@ -256,7 +259,7 @@ function showContent(input) {
 // showContent(JSON.parse(localStorage.getItem("dataOfPage")));
 
 // pushed
-
+let data2 = JSON.parse(localStorage.getItem("dataOfPage"));
 var city = document.getElementById("select_city");
 city.addEventListener("change", showRightSideContent);
 var domain = document.getElementById("select_category");
@@ -266,26 +269,43 @@ var wfm_check = document.getElementById("wfh_check");
 var pt_check = document.getElementById("pt_check");
 var total_internships = document.getElementById("internship_heading");
 var x = Math.round(Math.random() * 500);
-total_internships.innerText = `Total internships : ${x}`;
-pt_check.addEventListener("change", showRightSideContent);
-wfm_check.addEventListener("change", showRightSideContent);
+total_internships.innerText = `Total internships : ${ArrData.length}`;
+wfm_check.addEventListener("change", () => {
+  let wfm_data = data2.filter((el) => {
+    return el.type == "work from home";
+  });
+  if (wfm_check.checked) {
+    showContent(wfm_data);
+    total_internships.innerText = `Total internships : ${wfm_data.length}`;
+  } else {
+    showContent(data2);
+    total_internships.innerText = `Total internships : ${data2.length}`;
+  }
+});
+pt_check.addEventListener("change", () => {
+  let pt_data = data2.filter((el) => {
+    return el.type == "part time";
+  });
+
+  if (pt_check.checked) {
+    showContent(pt_data);
+    total_internships.innerText = `Total internships : ${pt_data.length}`;
+  } else {
+    showContent(data2);
+    total_internships.innerText = `Total internships : ${data2.length}`;
+  }
+});
 
 function showRightSideContent() {
   let selectedOption = city.value;
   let selectDomain = domain.value;
 
-  console.log(wfm_check.checked);
-  console.log(pt_check);
-
   let data = JSON.parse(localStorage.getItem("dataOfPage"));
   let mod = data.filter(function filterDomain(el) {
     return el.domain == selectDomain;
   });
-  // console.log(data);
-  // console.log(mod);
 
   showContent(mod);
-  console.log(selectDomain);
 
   let modified = mod.filter(function filterCity(el) {
     return el.location == selectedOption;

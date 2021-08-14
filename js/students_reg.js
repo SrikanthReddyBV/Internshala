@@ -25,7 +25,6 @@ function initiateSignup() {
     firstname.value = "";
     lastname.value = "";
   } else {
-    console.log(reg_std_db);
     let temp = {
       password: "",
       email: "",
@@ -48,7 +47,7 @@ function initiateSignup() {
       temp.lastname = lastname.value;
 
       reg_std_db.push(temp);
-      console.log(reg_std_db);
+
       localStorage.setItem("reg_std_db", JSON.stringify(reg_std_db));
 
       alert("Signup Success! Please login");

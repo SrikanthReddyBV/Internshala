@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+</html>
+
+<script>
+  let body = document.querySelector("body");
+  fetch("http://localhost:2345/domains")
+    .then((res) => res.json())
+    .then((data) => {
+      //   console.log("data:", data);
+
+      let cityId = [];
+
+      data.forEach(({ _id }) => {
+        cityId.push(_id);
+      });
+
+      console.log(cityId);
+    });
+
+  fetch("http://localhost:2345/internships")
+    .then((res) => res.json())
+    .then((data) => {
+      console.log("data:", data);
+      let cityId = [];
+
+      data.forEach(({ _id }) => {
+        cityId.push(_id);
+      });
+      let p = document.createElement("h1");
+      p.append(cityId);
+      body.append(p);
+
+      //   console.log("city:", cityId);
+    });
+
+  //   console.log(item);
+
+  //   console.log(item[0]);
+  //   console.log(item[1]);
+
+  let cityAiD = [
+    `6127aefa62d4be4958afffdb,6127aefa62d4be4958afffdc,6127aefa62d4be4958afffdd,6127aefa62d4be4958afffde,6127aefa62d4be4958afffdf,6127aefa62d4be4958afffe0,6127aefa62d4be4958afffe1,6127aefa62d4be4958afffe2,6127aefa62d4be4958afffe3,6127aefa62d4be4958afffe4,6127aefa62d4be4958afffe8,6127aefa62d4be4958afffe5,6127aefa62d4be4958afffe7,6127aefa62d4be4958afffe6,6127aefa62d4be4958afffe9,6127aefa62d4be4958afffea,6127aefa62d4be4958afffeb,6127aefa62d4be4958afffec,6127aefa62d4be4958afffed,6127aefa62d4be4958afffee,6127aefa62d4be4958affff0,6127aefa62d4be4958afffef,6127aefa62d4be4958affff2,6127aefa62d4be4958affff1,6127aefa62d4be4958affff3,6127aefa62d4be4958affff4,6127aefa62d4be4958affff5,6127aefa62d4be4958affff7,6127aefa62d4be4958affff6,6127aefa62d4be4958affff8,6127aefa62d4be4958affff9,6127aefa62d4be4958affffa,6127aefa62d4be4958affffb,6127aefa62d4be4958affffc,6127aefa62d4be4958affffd,6127aefa62d4be4958affffe,6127aefa62d4be4958afffff,6127aefa62d4be4958b00000,6127aefa62d4be4958b00001,6127aefa62d4be4958b00002,6127aefa62d4be4958b00003,6127aefa62d4be4958b00004,6127aefa62d4be4958b00005,6127aefa62d4be4958b00006,6127aefa62d4be4958b00007,6127aefa62d4be4958b00008,6127aefa62d4be4958b00009,6127aefa62d4be4958b0000a,6127aefa62d4be4958b0000b,6127aefa62d4be4958b0000c,6127aefa62d4be4958b0000d,6127aefa62d4be4958b0000e`,
+  ];
+  //   console.log(cityAiD.length);
+
+  let domainId = [
+    `6127c1856487cf2ffcc10220,6127c1856487cf2ffcc10221,6127c1856487cf2ffcc10222,6127c1856487cf2ffcc10223,6127c1856487cf2ffcc10224,6127c1856487cf2ffcc10225,6127c1856487cf2ffcc10226,6127c1856487cf2ffcc1022a,6127c1856487cf2ffcc10227,6127c1856487cf2ffcc10229,6127c1856487cf2ffcc10228,6127c1856487cf2ffcc1022b,6127c1856487cf2ffcc1022d,6127c1856487cf2ffcc1022e,6127c1856487cf2ffcc1022c,6127c1856487cf2ffcc1022f,6127c1856487cf2ffcc10230,6127c1856487cf2ffcc10231,6127c1856487cf2ffcc10233,6127c1856487cf2ffcc10232,6127c1856487cf2ffcc10234,6127c1856487cf2ffcc10235,6127c1856487cf2ffcc10236,6127c1856487cf2ffcc10237,6127c1856487cf2ffcc10238,6127c1856487cf2ffcc10239,6127c1856487cf2ffcc1023a,6127c1856487cf2ffcc1023b,6127c1856487cf2ffcc1023c,6127c1856487cf2ffcc1023d,6127c1856487cf2ffcc1023e,6127c1856487cf2ffcc1023f,6127c1856487cf2ffcc10240,6127c1856487cf2ffcc10241,6127c1856487cf2ffcc10242,6127c1856487cf2ffcc10243,6127c1856487cf2ffcc10244,6127c1856487cf2ffcc10245,6127c1856487cf2ffcc10246,6127c1856487cf2ffcc10248,6127c1856487cf2ffcc10247,6127c1856487cf2ffcc10249,6127c1856487cf2ffcc1024a,6127c1856487cf2ffcc1024c,6127c1856487cf2ffcc1024b,6127c1856487cf2ffcc1024d,6127c1856487cf2ffcc1024e,6127c1856487cf2ffcc1024f,6127c1856487cf2ffcc10250,6127c1856487cf2ffcc10251,6127c1856487cf2ffcc10252,6127c1856487cf2ffcc10253,6127c1856487cf2ffcc10254,6127c1856487cf2ffcc10255,6127c1856487cf2ffcc10256,6127c1856487cf2ffcc10257,6127c1856487cf2ffcc10259,6127c1856487cf2ffcc10258,6127c1856487cf2ffcc1025b,6127c1856487cf2ffcc1025a,6127c1856487cf2ffcc1025c,6127c1856487cf2ffcc1025e,6127c1856487cf2ffcc1025d,6127c1856487cf2ffcc1025f,6127c1856487cf2ffcc10260,6127c1856487cf2ffcc10261,6127c1856487cf2ffcc10262,6127c1856487cf2ffcc10263,6127c1856487cf2ffcc10265,6127c1856487cf2ffcc10264,6127c1856487cf2ffcc10266,6127c1856487cf2ffcc10267,6127c1856487cf2ffcc10269,6127c1856487cf2ffcc10268,6127c1856487cf2ffcc1026a,6127c1856487cf2ffcc1026b,6127c1856487cf2ffcc1026c,6127c1856487cf2ffcc1026d,6127c1856487cf2ffcc1026e,6127c1856487cf2ffcc1026f,6127c1856487cf2ffcc10270,6127c1856487cf2ffcc10271,6127c1856487cf2ffcc10272,6127c1856487cf2ffcc10274,6127c1856487cf2ffcc10273,6127c1856487cf2ffcc10276,6127c1856487cf2ffcc10275,6127c1856487cf2ffcc10278,6127c1856487cf2ffcc10277,6127c1856487cf2ffcc10279,6127c1856487cf2ffcc1027a,6127c1856487cf2ffcc1027b,6127c1856487cf2ffcc1027c,6127c1856487cf2ffcc1027d,6127c1856487cf2ffcc1027e,6127c1856487cf2ffcc1027f,6127c1856487cf2ffcc10280,6127c1856487cf2ffcc10282,6127c1856487cf2ffcc10281,6127c1856487cf2ffcc10283,6127c1856487cf2ffcc10284,6127c1856487cf2ffcc10285,6127c1856487cf2ffcc10286,6127c1856487cf2ffcc10287,6127c1856487cf2ffcc10288,6127c1856487cf2ffcc10289,6127c1856487cf2ffcc1028a,6127c1856487cf2ffcc1028b,6127c1856487cf2ffcc1028c,6127c1856487cf2ffcc1028d,6127c1856487cf2ffcc1028e,6127c1856487cf2ffcc10290,6127c1856487cf2ffcc1028f,6127c1856487cf2ffcc10291,6127c1856487cf2ffcc10292,6127c1856487cf2ffcc10293,6127c1856487cf2ffcc10295,6127c1856487cf2ffcc10296,6127c1856487cf2ffcc10294,6127c1856487cf2ffcc10299,6127c1856487cf2ffcc10298,6127c1856487cf2ffcc10297,6127c1856487cf2ffcc1029a,6127c1856487cf2ffcc1029b,6127c1856487cf2ffcc1029c,6127c1856487cf2ffcc1029e,6127c1856487cf2ffcc1029d,6127c1856487cf2ffcc1029f,6127c1856487cf2ffcc102a0,6127c1856487cf2ffcc102a1,6127c1856487cf2ffcc102a2,6127c1856487cf2ffcc102a3,6127c1856487cf2ffcc102a4,6127c1856487cf2ffcc102a5,6127c1856487cf2ffcc102a6,6127c1856487cf2ffcc102a7,6127c1856487cf2ffcc102a8,6127c1856487cf2ffcc102a9,6127c1856487cf2ffcc102aa,6127c1856487cf2ffcc102ac,6127c1856487cf2ffcc102ad,6127c1856487cf2ffcc102ab,6127c1856487cf2ffcc102af,6127c1856487cf2ffcc102ae,6127c1856487cf2ffcc102b0,6127c1856487cf2ffcc102b1,6127c1856487cf2ffcc102b2,6127c1856487cf2ffcc102b7,6127c1856487cf2ffcc102b3,6127c1856487cf2ffcc102b8,6127c1856487cf2ffcc102b5,6127c1856487cf2ffcc102b4,6127c1856487cf2ffcc102b6`,
+  ];
+
+  let image = [
+    `https://internshala.com/cached_uploads/logo%2F60e6b087c8abf1625731207.png,https://internshala.com/cached_uploads/logo%2F60af3e2a8993b1622097450.png,https://internshala.com/cached_uploads/logo%2F5e2fdf16c18f71580195606.png,https://internshala.com/cached_uploads/logo%2F6125e8adc62d91629874349.jpg,https://internshala.com/cached_uploads/logo%2F60cc3eda3b2041623998170.png,https://internshala.com/cached_uploads/logo%2F5eeb4296d3cc51592476310.png,https://internshala.com/cached_uploads/logo%2F5e2fdd066e0d31580195078.jpg,https://internshala.com/cached_uploads/logo%2F6125c7742ac1a1629865844.png,https://internshala.com/cached_uploads/logo%2F6015194e39f811611995470.png,https://internshala.com/cached_uploads/logo%2F5e254462f33be1579500642.png,https://internshala.com/cached_uploads/logo%2F5fd0ccdb3afc61607519451.png,https://internshala.com/cached_uploads/logo%2F611a57eb0bc3d1629116395.png,https://internshala.com/cached_uploads/logo%2F5e2fdde9161d31580195305.png,https://internshala.com/cached_uploads/logo%2F5eeeff57ed0fa1592721239.png,https://internshala.com/cached_uploads/logo%2F5e2fde412c53e1580195393.png,https://internshala.com/cached_uploads/logo%2F5e2fdef0cfeda1580195568.png,https://internshala.com/cached_uploads/logo%2F5f2c9487a0e171596757127.jpg,https://internshala.com/cached_uploads/logo%2F5e2fdf6b742a41580195691.png,https://internshala.com/cached_uploads/logo%2F5f3168a2ce1e61597073570.jpg,https://internshala.com/cached_uploads/logo%2F60af3e2a8993b1622097450.png,https://internshala.com/cached_uploads/logo%2F60ff7e8b193c61627356811.png,https://internshala.com/cached_uploads/logo%2F60d444ce672aa1624523982.jpeg,https://internshala.com/cached_uploads/logo%2F607f40bac06e31618952378.png,https://internshala.com/cached_uploads/logo%2F61275cf93063f1629969657.jpg,https://internshala.com/cached_uploads/logo%2F5e2fde3c949571580195388.jpg,https://internshala.com/cached_uploads/logo%2F60586a348df821616407092.png,https://internshala.com/cached_uploads/logo%2F60ffabfca5c481627368444.jpg,https://internshala.com/cached_uploads/logo%2F60586a348df821616407092.png,https://internshala.com/cached_uploads/logo%2F5e2fddc0562681580195264.pnghttps://internshala.com/cached_uploads/logo%2F6014cf39b6c361611976505.jpg,https://logo.clearbit.com/it-connect.fr,https://logo.clearbit.com/indeed.com,https://logo.clearbit.com/indeed.jobs,https://logo.clearbit.com/adobe.com,https://logo.clearbit.com/adorama.com,https://logo.clearbit.com/accuweather.com,https://logo.clearbit.com/accuweaver.com,https://logo.clearbit.com/zara.com,https://logo.clearbit.com/hm.com,https://logo.clearbit.com/allensolly.com,https://logo.clearbit.com/allen.bike,https://logo.clearbit.com/mango.com,https://logo.clearbit.com/levi.jp,https://logo.clearbit.com/le.com,https://logo.clearbit.com/ajio.com,https://logo.clearbit.com/booking.com,https://logo.clearbit.com/cnet.com,https://logo.clearbit.com/healthline.com,https://logo.clearbit.com/kaiserpermanente.org,https://logo.clearbit.com/dwell.com,https://logo.clearbit.com/quickmeme.com,https://logo.clearbit.com/quickenloans.com,https://logo.clearbit.com/sdc.com,https://logo.clearbit.com/sdce.edu,https://logo.clearbit.com/sdce.edu,https://logo.clearbit.com/fflogs.com,https://logo.clearbit.com/facebook.com`,
+  ];
+</script>

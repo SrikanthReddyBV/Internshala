@@ -1,6 +1,6 @@
 const get = (model) => async (req, res) => {
   try {
-    const items = await model.find().lean().exec();
+    const items = await model.find().populate().lean().exec();
     return res.send(items);
   } catch (err) {
     return res.status(400).send(err.message);

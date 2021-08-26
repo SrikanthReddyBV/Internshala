@@ -22,9 +22,9 @@ app.set("view engine", "ejs");
 
 app.use("/domains", domainController);
 
-app.use("locations", locationController);
+app.use("/locations", locationController);
 
-app.use("internships", internshipController);
+app.use("/internships", internshipController);
 
 app.listen("2345", async () => {
   await connection();

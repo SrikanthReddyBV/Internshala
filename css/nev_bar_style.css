@@ -132,6 +132,7 @@ button {
 .slide {
   justify-content: center;
   align-items: center;
+  margin: auto;
 
   margin-top: 180px !important;
 }

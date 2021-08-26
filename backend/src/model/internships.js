@@ -16,6 +16,8 @@ const internshipSchema = new mongoose.Schema(
       required: true,
       ref: "location",
     },
+    wfh: { type: Boolean, default: false },
+    part_time: { type: Boolean, default: false },
   },
   {
     versionKey: false,

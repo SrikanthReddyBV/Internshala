@@ -8,7 +8,19 @@ const router = express.Router();
 
 router.post("/", CRUD(internships).post);
 
-router.get("/", CRUD(internships).get);
+router.get("/", async (req, res) => {
+  try {
+    const intern = await internships
+      .find()
+      .populate("domain")
+      .populate("city")
+      .lean()
+      .exec();
+    return res.send(intern);
+  } catch (err) {
+    return res.status(400).send(err.message);
+  }
+});
 
 router.get("/:id", CRUD(internships).getOne);
 

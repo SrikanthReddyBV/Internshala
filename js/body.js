@@ -194,8 +194,20 @@ function filterDomain(el) {
   return el.domain == "Web Development";
 }
 
+function apiData() {
+  fetch("http://localhost:2345/internships")
+    .then((res) => res.json())
+    .then((data) => {
+      showContent(data);
+
+      //   console.log("city:", cityId);
+    });
+}
+apiData();
 function showContent(input) {
   let data = input;
+  var total_internships = document.getElementById("internship_heading");
+  total_internships.innerText = `Total internships : ${data.length}`;
 
   let container = document.getElementById("for_dom");
   container.innerHTML = null;
@@ -220,9 +232,9 @@ function showContent(input) {
     viewdetails_down.className = "viewdetails_down";
     upper_div_with_img.append(company_img, industry);
     company_img.src = data[i].image;
-    industry.innerHTML = data[i].domain;
+    industry.innerHTML = data[i].domain.domain;
     company_name_box.innerHTML = data[i].name;
-    location_box.innerHTML = `Location: ${data[i].location}`;
+    location_box.innerHTML = `Location: ${data[i].city.city}`;
     details_of_apl.innerHTML = `<div>
                   Start Date<br />
                   Immidiate
@@ -255,83 +267,82 @@ function showContent(input) {
     container.innerHTML = "<h1>No Result found!</h1>";
   }
 }
+//showContent(JSON.parse(localStorage.getItem("dataOfPage")));
 
-// showContent(JSON.parse(localStorage.getItem("dataOfPage")));
+// // pushed
+// let data2 = JSON.parse(localStorage.getItem("dataOfPage"));
+// var city = document.getElementById("select_city");
+// city.addEventListener("change", showRightSideContent);
+// var domain = document.getElementById("select_category");
+// domain.addEventListener("change", showRightSideContent);
 
-// pushed
-let data2 = JSON.parse(localStorage.getItem("dataOfPage"));
-var city = document.getElementById("select_city");
-city.addEventListener("change", showRightSideContent);
-var domain = document.getElementById("select_category");
-domain.addEventListener("change", showRightSideContent);
+// var wfm_check = document.getElementById("wfh_check");
+// var pt_check = document.getElementById("pt_check");
 
-var wfm_check = document.getElementById("wfh_check");
-var pt_check = document.getElementById("pt_check");
-var total_internships = document.getElementById("internship_heading");
-var x = Math.round(Math.random() * 500);
-total_internships.innerText = `Total internships : ${ArrData.length}`;
-wfm_check.addEventListener("change", () => {
-  let wfm_data = data2.filter((el) => {
-    return el.type == "work from home";
-  });
-  if (wfm_check.checked) {
-    showContent(wfm_data);
-    total_internships.innerText = `Total internships : ${wfm_data.length}`;
-  } else {
-    showContent(data2);
-    total_internships.innerText = `Total internships : ${data2.length}`;
-  }
-});
-pt_check.addEventListener("change", () => {
-  let pt_data = data2.filter((el) => {
-    return el.type == "part time";
-  });
+// var x = Math.round(Math.random() * 500);
 
-  if (pt_check.checked) {
-    showContent(pt_data);
-    total_internships.innerText = `Total internships : ${pt_data.length}`;
-  } else {
-    showContent(data2);
-    total_internships.innerText = `Total internships : ${data2.length}`;
-  }
-});
+// wfm_check.addEventListener("change", () => {
+//   let wfm_data = data2.filter((el) => {
+//     return el.type == "work from home";
+//   });
+//   if (wfm_check.checked) {
+//     showContent(wfm_data);
+//     total_internships.innerText = `Total internships : ${wfm_data.length}`;
+//   } else {
+//     showContent(data2);
+//     total_internships.innerText = `Total internships : ${data2.length}`;
+//   }
+// });
+// pt_check.addEventListener("change", () => {
+//   let pt_data = data2.filter((el) => {
+//     return el.type == "part time";
+//   });
 
-function showRightSideContent() {
-  let selectedOption = city.value;
-  let selectDomain = domain.value;
+//   if (pt_check.checked) {
+//     showContent(pt_data);
+//     total_internships.innerText = `Total internships : ${pt_data.length}`;
+//   } else {
+//     showContent(data2);
+//     total_internships.innerText = `Total internships : ${data2.length}`;
+//   }
+// });
 
-  let data = JSON.parse(localStorage.getItem("dataOfPage"));
-  let mod = data.filter(function filterDomain(el) {
-    return el.domain == selectDomain;
-  });
+// function showRightSideContent() {
+//   let selectedOption = city.value;
+//   let selectDomain = domain.value;
 
-  showContent(mod);
+//   let data = JSON.parse(localStorage.getItem("dataOfPage"));
+//   let mod = data.filter(function filterDomain(el) {
+//     return el.domain == selectDomain;
+//   });
 
-  let modified = mod.filter(function filterCity(el) {
-    return el.location == selectedOption;
-  });
-  if (wfm_check.checked || pt_check.checked) {
-    modified.pop();
-  }
+//   showContent(mod);
 
-  showContent(modified);
-  total_internships.innerText = `Total internships : ${modified.length}`;
-}
+//   let modified = mod.filter(function filterCity(el) {
+//     return el.location == selectedOption;
+//   });
+//   if (wfm_check.checked || pt_check.checked) {
+//     modified.pop();
+//   }
 
-// for testing purpose only. edit made by srikanth
+//   showContent(modified);
+//   total_internships.innerText = `Total internships : ${modified.length}`;
+// }
 
-if (localStorage.getItem("homesearch") != null) {
-  let e = JSON.parse(localStorage.getItem("homesearch")).searched_item;
+// // for testing purpose only. edit made by srikanth
 
-  let data = JSON.parse(localStorage.getItem("dataOfPage"));
-  let modified = data.filter(function (el) {
-    return el.location == e || el.domain == e;
-  });
+// if (localStorage.getItem("homesearch") != null) {
+//   let e = JSON.parse(localStorage.getItem("homesearch")).searched_item;
 
-  showContent(modified);
-  total_internships.innerText = `Total internships : ${modified.length}`;
+//   let data = JSON.parse(localStorage.getItem("dataOfPage"));
+//   let modified = data.filter(function (el) {
+//     return el.location == e || el.domain == e;
+//   });
 
-  localStorage.removeItem("homesearch");
-} else {
-  showContent(JSON.parse(localStorage.getItem("dataOfPage")));
-}
+//   showContent(modified);
+//   total_internships.innerText = `Total internships : ${modified.length}`;
+
+//   localStorage.removeItem("homesearch");
+// } else {
+//   showContent(JSON.parse(localStorage.getItem("dataOfPage")));
+// }

@@ -4,6 +4,12 @@ const path = require("path"); //core module (come inbuilt with node.js) no need 
 
 const connection = require("./configs/db");
 
+const domainController = require("./controller/domain");
+
+const locationController = require("./controller/location");
+
+const internshipController = require("./controller/internship");
+
 const app = express();
 
 app.use(express.json());
@@ -13,6 +19,12 @@ app.use(express.json());
 app.set("views", path.join(__dirname, "views"));
 
 app.set("view engine", "ejs");
+
+app.use("/domains", domainController);
+
+app.use("locations", locationController);
+
+app.use("internships", internshipController);
 
 app.listen("2345", async () => {
   await connection();

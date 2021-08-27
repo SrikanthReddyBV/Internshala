@@ -198,11 +198,13 @@ function apiData() {
   fetch("http://localhost:2345/internships")
     .then((res) => res.json())
     .then((data) => {
+      // console.log(data);
       showContent(data);
 
       //   console.log("city:", cityId);
     });
 }
+
 apiData();
 function showContent(input) {
   let data = input;
@@ -266,6 +268,85 @@ function showContent(input) {
   if (data.length == 0) {
     container.innerHTML = "<h1>No Result found!</h1>";
   }
+}
+
+var city = document.getElementById("select_city");
+city.addEventListener("change", showRightSideContent);
+var domain = document.getElementById("select_category");
+domain.addEventListener("change", showRightSideContent);
+
+var wfh_check = document.getElementById("wfh_check");
+// console.log("wfm_check:", wfm_check.checked);
+
+var pt_check = document.getElementById("pt_check");
+// console.log("pt_check:", pt_check.checked);
+// var total_internships = document.getElementById("internship_heading");
+// var x = Math.round(Math.random() * 500);
+// total_internships.innerText = `Total internships : ${x}`;
+pt_check.addEventListener("change", showRightSideContent);
+wfh_check.addEventListener("change", showRightSideContent);
+
+function showRightSideContent() {
+  let selectedOption = city.value;
+  let selectDomain = domain.value;
+
+  // console.log(wfm_check.checked);
+  // console.log(pt_check);
+
+  // let data = JSON.parse(localStorage.getItem("dataOfPage"));
+
+  fetch("http://localhost:2345/internships")
+    .then((res) => res.json())
+    .then((data) => {
+      // console.log(data);
+      let mod = data.filter(function filterDomain(el) {
+        return el.domain.domain == selectDomain;
+      });
+      // console.log("mod", mod);
+      showContent(mod);
+
+      let modified = mod.filter(function filterCity(el) {
+        return el.city.city == selectedOption;
+      });
+      // console.log("modified", modified);
+
+      showContent(modified);
+
+      if (wfh_check.checked && pt_check.checked) {
+        let workFromHomePt = modified.filter(({ wfh, part_time }) => {
+          return wfh == true && part_time == true;
+        });
+
+        showContent(workFromHomePt);
+        // console.log("workFromHomePt:", workFromHomePt);
+      } else if (wfh_check.checked) {
+        let workFromHome = modified.filter(({ wfh }) => {
+          return wfh == true;
+        });
+
+        showContent(workFromHome);
+        // console.log("workFromHome:", workFromHome);
+      } else if (pt_check.checked) {
+        let partTime = modified.filter(({ part_time }) => {
+          return part_time == true;
+        });
+
+        showContent(partTime);
+        // console.log("partTime:", partTime);
+      }
+    });
+
+  // console.log(data);
+  // console.log(mod);
+
+  // console.log(selectDomain);
+
+  // if (wfm_check.checked || pt_check.checked) {
+  //   modified.pop();
+  // }
+
+  // showContent(modified);
+  // total_internships.innerText = `Total internships : ${modified.length}`;
 }
 //showContent(JSON.parse(localStorage.getItem("dataOfPage")));
 

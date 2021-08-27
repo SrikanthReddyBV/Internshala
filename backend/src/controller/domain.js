@@ -11,6 +11,10 @@ router.post("/", CRUD(domains).post);
 router.get("/", CRUD(domains).get);
 
 router.get("/:id", CRUD(domains).getOne);
+router.delete("/a/:id", async (req, res) => {
+  const items = await domains.find({ city: req.params.id });
+  return res.send(items);
+});
 
 router.patch("/:id", CRUD(domains).update);
 

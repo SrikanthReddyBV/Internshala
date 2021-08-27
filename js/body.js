@@ -205,7 +205,7 @@ function apiData() {
     });
 }
 
-apiData();
+// apiData();
 function showContent(input) {
   let data = input;
   var total_internships = document.getElementById("internship_heading");
@@ -354,19 +354,8 @@ function showRightSideContent() {
         //console.log("partTime:", partTime);
       }
     });
-
-  // console.log(data);
-  // console.log(mod);
-
-  // console.log(selectDomain);
-
-  // if (wfm_check.checked || pt_check.checked) {
-  //   modified.pop();
-  // }
-
-  // showContent(modified);
-  // total_internships.innerText = `Total internships : ${modified.length}`;
 }
+
 //showContent(JSON.parse(localStorage.getItem("dataOfPage")));
 
 // // pushed
@@ -429,20 +418,21 @@ function showRightSideContent() {
 //   total_internships.innerText = `Total internships : ${modified.length}`;
 // }
 
-// // for testing purpose only. edit made by srikanth
+// for testing purpose only. edit made by srikanth
 
-// if (localStorage.getItem("homesearch") != null) {
-//   let e = JSON.parse(localStorage.getItem("homesearch")).searched_item;
+if (localStorage.getItem("homesearch") != null) {
+  let e = JSON.parse(localStorage.getItem("homesearch"));
 
-//   let data = JSON.parse(localStorage.getItem("dataOfPage"));
-//   let modified = data.filter(function (el) {
-//     return el.location == e || el.domain == e;
-//   });
+  fetch("http://localhost:2345/internships")
+    .then((res) => res.json())
+    .then((data) => {
+      let modified = data.filter(function (el) {
+        return el.city.city == e || el.domain.domain == e;
+      });
+      showContent(modified);
+    });
 
-//   showContent(modified);
-//   total_internships.innerText = `Total internships : ${modified.length}`;
-
-//   localStorage.removeItem("homesearch");
-// } else {
-//   showContent(JSON.parse(localStorage.getItem("dataOfPage")));
-// }
+  localStorage.removeItem("homesearch");
+} else {
+  apiData();
+}

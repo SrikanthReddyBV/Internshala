@@ -3,9 +3,6 @@
 var searchbox = document.getElementById("home_search");
 var btn = document.getElementById("searchIcon");
 btn.addEventListener("click", function () {
-  let temp = {
-    searched_item: searchbox.value,
-  };
-  localStorage.setItem("homesearch", JSON.stringify(temp));
+  localStorage.setItem("homesearch", JSON.stringify(searchbox.value));
   window.location.href = "pages/internships.html";
 });

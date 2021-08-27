@@ -34,7 +34,7 @@ function initiateLogin() {
 
         btn1.style.display = "none";
         btn2.style.display = "none";
-        anc1.href = "https://learn.masaischool.com/app/dashboard";
+        anc1.href = "../index.html";
         name.innerHTML = reg_std_db[i].firstname;
         signout.innerHTML = "Sign Out";
         anc1.append(signout);

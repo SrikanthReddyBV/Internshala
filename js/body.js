@@ -230,8 +230,12 @@ function showContent(input) {
     location_box.className = "location_box";
     let details_of_apl = document.createElement("div");
     details_of_apl.className = "details_of_apl";
+    let lastDivView = document.createElement("div");
+    lastDivView.className = "last_div_view";
+
     let viewdetails_down = document.createElement("div");
     viewdetails_down.className = "viewdetails_down";
+
     upper_div_with_img.append(company_img, industry);
     company_img.src = data[i].image;
     industry.innerHTML = data[i].domain.domain;
@@ -254,13 +258,37 @@ function showContent(input) {
                   ASAP
                 </div>`;
 
-    viewdetails_down.innerHTML = `<a href="details.html">View Details ></a>`;
+    let workFromHome = document.createElement("span");
+    let partTime = document.createElement("span");
+    workFromHome.className = "workFromHomeLast";
+    partTime.className = "partTimeJob";
+
+    if (data[i].wfh && data[i].part_time) {
+      workFromHome.innerHTML = `<span class="material-icons ">home_work</span>`;
+      partTime.innerHTML = `<span class="material-icons">
+work_outline
+</span>`;
+
+      lastDivView.append(workFromHome, partTime, viewdetails_down);
+    } else if (data[i].wfh) {
+      workFromHome.innerHTML = `<span class="material-icons ">home_work</span>`;
+      partTime.innerHTML = `<span class="material-icons">work</span>`;
+      lastDivView.append(workFromHome, partTime, viewdetails_down);
+    } else {
+      partTime.innerHTML = `<span class="material-icons">
+work_outline
+</span>`;
+      lastDivView.append(partTime, viewdetails_down);
+    }
+
+    viewdetails_down.innerHTML = `<a href="details.html?id=${data[i]._id}">       View Details ></a>`;
+
     main_div.append(
       upper_div_with_img,
       company_name_box,
       location_box,
       details_of_apl,
-      viewdetails_down
+      lastDivView
     );
 
     container.append(main_div);
@@ -276,24 +304,15 @@ var domain = document.getElementById("select_category");
 domain.addEventListener("change", showRightSideContent);
 
 var wfh_check = document.getElementById("wfh_check");
-// console.log("wfm_check:", wfm_check.checked);
 
 var pt_check = document.getElementById("pt_check");
-// console.log("pt_check:", pt_check.checked);
-// var total_internships = document.getElementById("internship_heading");
-// var x = Math.round(Math.random() * 500);
-// total_internships.innerText = `Total internships : ${x}`;
+
 pt_check.addEventListener("change", showRightSideContent);
 wfh_check.addEventListener("change", showRightSideContent);
 
 function showRightSideContent() {
   let selectedOption = city.value;
   let selectDomain = domain.value;
-
-  // console.log(wfm_check.checked);
-  // console.log(pt_check);
-
-  // let data = JSON.parse(localStorage.getItem("dataOfPage"));
 
   fetch("http://localhost:2345/internships")
     .then((res) => res.json())
@@ -332,7 +351,7 @@ function showRightSideContent() {
         });
 
         showContent(partTime);
-        // console.log("partTime:", partTime);
+        //console.log("partTime:", partTime);
       }
     });
 

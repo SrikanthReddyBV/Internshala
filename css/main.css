@@ -359,6 +359,7 @@ input:checked + .slider:before {
   color: grey;
   cursor: pointer;
 }
+
 .viewdetails_down {
   margin-top: 40px !important;
   margin-left: auto;
@@ -373,6 +374,15 @@ input:checked + .slider:before {
 .viewdetails_down > a:hover {
   color: #088af5;
   font-weight: bolder;
+}
+.last_div_view {
+  display: flex;
+}
+
+.workFromHomeLast,
+.partTimeJob {
+  margin: 5%;
+  color: grey;
 }
 
 /* ends here */

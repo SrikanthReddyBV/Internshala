@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script
+      src="https://kit.fontawesome.com/a13b999530.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="/static/css/main.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="/static/css/nev_bar_style.css" />
+
+    <link rel="stylesheet" href="/static/css/pageThree.css" />
+
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Details</title>
+    <link rel="icon" href="https://internshala.com//favicon.ico?v=5" />
+  </head>
+
+  <body>
+    <header>
+      <a class="logo" href="index.ejs">
+        <img
+          class="logo"
+          src="https://internshala.com/static/images/common/new_internshala_logo.svg"
+          alt="InternShala"
+        />
+      </a>
+      <nav>
+        <ul class="nav_links">
+          <li>
+            <a href="internships.ejs">Internships</a>
+          </li>
+          <li>
+            <a href="#">Online Training <span id="headOffer">OFFER</span></a>
+          </li>
+          <li>
+            <a href="#">Freshers Job</a>
+          </li>
+        </ul>
+      </nav>
+      <a href="students_log.ejs" id="cta">
+        <button class="headingbutton">Login</button></a
+      >
+      <a href="students_reg.ejs" id="cta1">
+        <button class="headingbutton" id="register">Register</button></a
+      >
+    </header>
+
+    <!-- <<<--- Vishal 3rd page design start here ---->
+    <div id="content">
+      <div class="container-fluid">
+        <div class="max-width-container">
+          <div id="details_container">
+            <div class="backToInternship">
+              <i class="ic-16-chevron-left"></i>
+              <a
+                href="https://internshala.com/internships/work-from-home-web%20development-jobs"
+              >
+                Back to search
+              </a>
+            </div>
+
+            <div
+              class="trainings_ad"
+              id="multiple_trainings"
+              data-url="https://trainings.internshala.com/?utm_source=is_web_internshala_details_page"
+            >
+              <div class="upskill_heading mobile">
+                Upskill yourself with Internshala Trainings
+              </div>
+              <div class="trainings_ad_container">
+                <div class="left_container">
+                  <div class="upskill_heading desktop">
+                    Upskill yourself with Internshala Trainings
+                  </div>
+                  <div class="training_tags">
+                    <div class="tag">Certified online trainings</div>
+                    <div class="tag">Placement assistance</div>
+                    <div class="tag">4-8 weeks</div>
+                  </div>
+                  <div class="trainings_link">
+                    <a class="training_link" target="_blank"
+                      >Learn Web Development<i class="ic-16-external-link"></i
+                    ></a>
+                    <a class="training_link" target="_blank"
+                      >Learn React<i class="ic-16-external-link"></i
+                    ></a>
+                    <a class="training_link" target="_blank"
+                      >Learn Node js <i class="ic-16-external-link"></i
+                    ></a>
+                  </div>
+                </div>
+                <div class="right_container">
+                  <img class="img" src="/static/images/page_3rd_image.png" />
+                </div>
+              </div>
+            </div>
+            <div class="heading_2_4 heading_title">
+              <%= internship.domain.domain %> Job/Innternship at <%=
+              internship.name %>
+            </div>
+            <div class="detail_view">
+              <div
+                class="
+                  container-fluid
+                  individual_internship
+                  visibilityTrackerItem
+                "
+                id="individual_internship_1368141"
+                internshipid="1368141"
+              >
+                <div class="internship_meta">
+                  <div class="individual_internship_header">
+                    <div class="company">
+                      <div class="heading_4_5 profile">
+                        <span class="profile_on_detail_page"
+                          ><%= internship.domain.domain %></span
+                        >
+                      </div>
+                      <div class="heading_6 company_name">
+                        <a class="link_display_like_text">
+                          <%= internship.name %>
+                        </a>
+                      </div>
+                    </div>
+                    <div class="internship_logo">
+                      <img
+                        loading="lazy"
+                        src="<%= internship.image %>"
+                        alt="Node.js Development Internship at Gastos Private Limited in "
+                      />
+                    </div>
+                  </div>
+                  <div
+                    class="
+                      individual_internship_details
+                      individual_internship_internship
+                    "
+                  >
+                    <div id="location_names">
+                      <i class="ic-16-home"></i>
+                      <span>
+                        <!-- <a class="location_link" href="/internships/virtual-internship">Work From
+                                                    Home</a> -->
+                      </span>
+                    </div>
+                    <div class="internship_other_details_container">
+                      <div class="other_detail_item_row">
+                        <div class="other_detail_item">
+                          <div class="item_heading">
+                            <i class="ic-16-play-circle"></i>
+                            <span> Start Date </span>
+                          </div>
+                          <div class="item_body" id="start-date-first">
+                            <span class="start_immediately_mobile"
+                              >Starts&nbsp;</span
+                            ><span class="start_immediately_desktop"
+                              >Immediately</span
+                            >
+                          </div>
+                        </div>
+
+                        <div class="other_detail_item">
+                          <div class="item_heading">
+                            <i class="ic-16-calendar"></i>
+                            <span>Duration</span>
+                          </div>
+                          <div class="item_body">2 Months</div>
+                        </div>
+                      </div>
+
+                      <div class="other_detail_item_row">
+                        <div class="other_detail_item stipend_container">
+                          <div class="item_heading">
+                            <i class="ic-16-money"></i>
+                            <span> Stipend </span>
+                          </div>
+                          <div class="item_body">
+                            <span class="stipend"
+                              ><i class="ic-16-currency-inr"></i> <%=
+                              internship.amount %> /month</span
+                            >
+                          </div>
+                        </div>
+                        <div class="other_detail_item apply_by">
+                          <div class="item_heading">
+                            <i class="ic-16-hourglass"></i>
+                            <span>Apply By</span>
+                          </div>
+                          <div class="item_body">ASAP</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="button_container">
+                  <div class="tags_container">
+                    <div class="label_container label_container_desktop">
+                      Internship
+                    </div>
+                    <!-- <div class="label_container label_container_mobile">
+                                                    Internship </div> -->
+                  </div>
+                </div>
+                <div class="button_container">
+                  <div class="applications_message_container">
+                    <div class="application_icon">
+                      <img
+                        src="/static/images/icons/bolt_icon_color.svg"
+                        alt=""
+                      />
+                    </div>
+                    <div class="applications_message">
+                      Be an early applicant
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="internship_details">
+                <div class="section_heading heading_5_5">
+                  About <%= internship.name %>
+                </div>
+                <div class="text-container">
+                  Lorem Ipsum is simply dummy text of the printing and
+                  typesetting industry. Lorem Ipsum has been the industry's
+                  standard dummy text ever since the 1500s, when an unknown
+                  printer took a galley of type and scrambled it to make a type
+                  specimen book.
+                </div>
+                <div class="section_heading heading_5_5">
+                  About the work from home job/internship
+                </div>
+                <div class="text-container">
+                  Lorem Ipsum is simply dummy text of the printing and
+                  typesetting industry.
+                </div>
+                <!-- <div class="section_heading heading_5_5">Skill(s) required</div>
+                <div class="round_tabs_container">
+                  <span class="round_tabs">HTML</span>
+                  <span class="round_tabs">CSS</span>
+                  <span class="round_tabs">Node.js</span>
+                  <span class="round_tabs">ReactJS</span>
+                </div> -->
+                <div class="section_heading heading_5_5">Who can apply</div>
+                <div class="text-container who_can_apply">
+                  <p style="margin-bottom: 4px; color: #484848">
+                    Only those candidates can apply who:
+                  </p>
+                  <p style="margin-bottom: 4px; color: #484848">
+                    1. are available for the work from home job/internship
+                  </p>
+                  <p></p>
+                  <p style="margin-bottom: 4px; color: #484848">
+                    2. can start the work from home Job/Internship between 21st
+                    Jul'21 and 25th Aug'21
+                  </p>
+                  <p></p>
+                  <p style="margin-bottom: 4px; color: #484848">
+                    3. are available for duration of 2 months
+                  </p>
+                  <p></p>
+                  <p style="margin-bottom: 4px; color: #484848">
+                    4. have relevant skills and interests
+                  </p>
+                  <p></p>
+                  <p style="margin-bottom: 4px; color: #484848"></p>
+                </div>
+                <div class="section_heading heading_5_5">Perks</div>
+                <div class="round_tabs_container">
+                  <span class="round_tabs">Certificate</span>
+                  <span class="round_tabs"> Letter of recommendation</span>
+                  <span class="round_tabs"> Flexible work hours</span>
+                  <span class="round_tabs"> 5 days a week</span>
+                </div>
+                <div class="section_heading heading_5_5">
+                  Number of openings
+                </div>
+                <div class="text-container">1</div>
+                <div class="buttons_container">
+                  <input type="hidden" id="status" value="active" />
+                  <a href="students_log.ejs">
+                    <button class="btn btn-large">Apply now</button>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div id="dont_charge_fee_message" class="alert alert-warning">
+              <i></i>
+              <span>
+                <p><b>Save yourself from fraud!</b></p>
+                <p>
+                  If an employer asks you to pay any security deposit,
+                  registration fee, laptop fee, etc.,
+                  <strong>do not</strong> pay and
+                  <strong
+                    ><u
+                      ><a
+                        href="/student/help_center_faq/7?faq=45"
+                        target="_blank"
+                        style="color: inherit"
+                        >notify us</a
+                      ></u
+                    ></strong
+                  >
+                  immediately. Remember, Internshala
+                  <strong>doesn't charge</strong> a fee from the students to
+                  apply to a job or an internship &amp;
+                  <strong>we don't</strong> allow other companies to do so
+                  either.
+                </p>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Footer -->
+    <div id="footer" class="generic_footer">
+      <div class="max-width-container">
+        <div class="footer_container">
+          <!-- footer coloumn -1 -->
+
+          <div class="footer_coloumn">
+            <div class="footer_list">
+              <h3>Internships by places</h3>
+              <div class="footer_list_item">
+                <a href="#">Internships in India</a>
+              </div>
+              <div class="footer_list_item">
+                <a href="#">Internships in Delhi</a>
+              </div>
+              <div class="footer_list_item">
+                <a href="#">Internships in Bangalore</a>
+              </div>
+              <div class="footer_list_item">
+                <a href="#">Internships in Hyderabad</a>
+              </div>
+              <div class="footer_list_item">
+                <a href="#">Internships in Mumbai</a>
+              </div>
+              <div class="footer_list_item">
+                <a href="#">Internships in Chennai</a>
+              </div>
+              <div class="footer_list_item">
+                <a href="#">Internships in Gurgaon</a>
+              </div>
+              <div class="footer_list_item">
+                <a href="#">Internships in Kolkata</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- footer coloumn -2  -->
+          <div class="footer_coloumn">
+            <div class="footer_list">
+              <h3>Internships by Stream</h3>
+              <div class="footer_list_item">
+                <a href="#">Computer Science Internship</a>
+              </div>
+              <div class="footer_list_item">
+                <a href="#">Electronics Internship</a>
+              </div>
+              <div class="footer_list_item">
+                <a href="#">Mechanical Internship</a>
+              </div>
+              <div class="footer_list_item">
+                <a href="#">Civil Internship</a>
+              </div>
+              <div class="footer_list_item">
+                <a href="#">Marketing Internship</a>
+              </div>
+              <div class="footer_list_item">
+                <a href="#">Chemical Internship</a>
+              </div>
+              <div class="footer_list_item">
+                <a href="#">Finance Internship</a>
+              </div>
+              <div class="footer_list_item">
+                <a href="#">Summer Research Fellowship</a>
+              </div>
+            </div>
+          </div>
+          <!-- footer coloumn -3 -->
+          <div class="footer_coloumn">
+            <div class="footer_list">
+              <h3>
+                Online Trainings
+                <span class="orange"> <a href="#">OFFER</a></span>
+              </h3>
+              <div class="footer_list_item">
+                <a href="#">Programming with python</a>
+              </div>
+              <div class="footer_list_item">
+                <a href="#">Digital Marketing</a>
+              </div>
+              <div class="footer_list_item">
+                <a href="#">Web Development</a>
+              </div>
+              <div class="footer_list_item">
+                <a href="#">Machine Learning</a>
+              </div>
+              <div class="footer_list_item">
+                <a href="#">Advance Excel</a>
+              </div>
+              <div class="footer_list_item">
+                <a href="#">Ethical Hacking</a>
+              </div>
+              <div class="footer_list_item">
+                <a href="#">Auto CAD</a>
+              </div>
+              <div class="footer_list_item">
+                <a href="#">Creative Writing</a>
+              </div>
+            </div>
+          </div>
+          <!-- footer coloumn -4 -->
+          <div class="footer_coloumn">
+            <div class="footer_list">
+              <h3>About Internshala</h3>
+              <div class="footer_list_item">
+                <a href="#">About Us</a>
+              </div>
+              <div class="footer_list_item">
+                <a href="#">We're hiring</a>
+              </div>
+              <div class="footer_list_item">
+                <a href="#">Hire Interns for your company</a>
+              </div>
+              <div class="footer_list_item">
+                <a href="#">Team Diary</a>
+              </div>
+              <div class="footer_list_item">
+                <a href="#">Blog</a>
+              </div>
+              <div class="footer_list_item">
+                <a href="#">Our Services</a>
+              </div>
+              <div class="footer_list_item">
+                <a href="#">Terms and Conditions</a>
+              </div>
+              <div class="footer_list_item">
+                <a href="#">Privacy</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- footer bottom -->
+        <br />
+        <div id="footer_bottom">
+          <!-- Android app button -->
+          <div id="android_app_container" class="footer_list_item">
+            <a href="#">
+              <i class="fab fa-google-play"> <span>Get Android App</span></i>
+            </a>
+          </div>
+          <!-- Social media Icons -->
+          <div id="social_media_container">
+            <span>
+              <a href="#"> <i class="fab fa-instagram footer_icons"></i></a>
+              <a href="#"><i class="fab fa-twitter footer_icons"></i></a>
+              <a href="#"><i class="fab fa-youtube footer_icons"></i></a>
+              <a href="#"><i class="fab fa-linkedin-in footer_icons"></i></a>
+            </span>
+          </div>
+
+          <div id="copyright">
+            <span>© Copyright 2021 InternShala</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

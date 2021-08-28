@@ -5,32 +5,28 @@
       src="https://kit.fontawesome.com/a13b999530.js"
       crossorigin="anonymous"
     ></script>
-    <link rel="stylesheet" href="../css/main.css" />
+
+    <link rel="stylesheet" href="/static/css/main.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap"
       rel="stylesheet"
     />
-
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
-    <link rel="stylesheet" href="../css/nev_bar_style.css" />
-
+    <link rel="stylesheet" href="/static/css/nev_bar_style.css" />
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" href="https://internshala.com//favicon.ico?v=5" />
-    <title>Internships</title>
-    <style></style>
+    <title>Document</title>
   </head>
   <body>
-    <!-- Header -->
-
+    <!-- header/nav bar -->
     <header>
-      <a class="logo" href="../index.html">
+      <a class="logo" href="index.ejs">
         <img
           class="logo"
           src="https://internshala.com/static/images/common/new_internshala_logo.svg"
@@ -40,7 +36,7 @@
       <nav>
         <ul class="nav_links">
           <li>
-            <a href="internships.html">Internships</a>
+            <a href="internships.ejs">Internships</a>
           </li>
           <li>
             <a href="#">Online Training <span id="headOffer">OFFER</span></a>
@@ -50,110 +46,107 @@
           </li>
         </ul>
       </nav>
-      <a href="students_log.html" id="cta">
+      <a href="students_log.ejs" id="cta">
         <button class="headingbutton">Login</button></a
       >
-      <a href="students_reg.html" id="cta1">
+      <a href="students_reg.ejs" id="cta1">
         <button class="headingbutton" id="register">Register</button></a
       >
     </header>
 
-    <!-- End of Header -->
+    <!--         This is body of signup page        -->
+    <div style="margin-top: 30px"></div>
+    <div class="max-width-container">
+      <div id="regestration_container">
+        <div id="regestration_container_left">
+          <div class="regestration_content">
+            <div class="heading_0">
+              A
+              <span id="freetext">Free</span>
+              ride to your dream career
+              <h3>Register and apply to 10000+ opportunities</h3>
+            </div>
 
-    <!-- Body Content for Internships page  -->
-
-    <div id="internship_heading">
-      <h4 style="text-align: left">Total Internships</h4>
-    </div>
-
-    <div id="max-width-container">
-      <div id="reference">
-        <div id="search_criteria_container">
-          <div id="filters">
-            <div id="form_container">
-              <div id="filter_logo">
-                <i class="fas fa-filter"></i>
-                <span>Filters</span>
+            <div class="features_container">
+              <div class="feature">
+                <img
+                  src="https://internshala.com/static/images/common/check_box.svg"
+                />
+                <h4>Internships</h4>
               </div>
-
-              <form id="search_form">
-                <!-- Category Selector -->
-                <div class="category_container">
-                  <label for="select_category">Category</label>
-                  <div id="category_options">
-                    <select
-                      id="select_category"
-                      name="select_category"
-                      data-placeholder="e.g Marketing"
-                      class="form_control"
-                    >
-                      <option value="Accounts">Accounts</option>
-                      <option value="Web Development">Web Development</option>
-                      <option value="Data Science">Data Science</option>
-                      <option value="Android Development">
-                        Android Development
-                      </option>
-                      <option value="Big Data">Big Data</option>
-                    </select>
-                  </div>
-                </div>
-
-                <!-- City selector -->
-
-                <div class="category_container">
-                  <label for="select_city">City</label>
-                  <div id="city_options">
-                    <select
-                      id="select_city"
-                      name="select_city"
-                      data-placeholder="e.g Marketing"
-                      class="form_control"
-                      onselect="cityselect()"
-                    >
-                      <option value="Hydrabad">Hyderabad</option>
-                      <option value="Bengaluru">Bengaluru</option>
-                      <option value="Chennai">Chennai</option>
-                      <option value="Mumbai">Mumbai</option>
-                      <option value="Delhi">Delhi</option>
-                      <option value="Pune">Pune</option>
-                    </select>
-                  </div>
-                </div>
-
-                <!-- Check box - 1 -->
-
-                <div class="filters_checkboxes">
-                  <div class="flex_row">
-                    <label for="work_from_home">Work from home</label>
-                    <div class="switch_container">
-                      <!-- Rounded switch -->
-                      <label class="switch">
-                        <input type="checkbox" id="wfh_check" />
-                        <span class="slider round"></span>
-                      </label>
-                    </div>
-
-                    <!-- Checkbox - 2 -->
-                  </div>
-                  <div class="flex_row">
-                    <label for="part_time">Part time</label>
-                    <div class="switch_container">
-                      <!-- Rounded switch -->
-                      <label class="switch">
-                        <input type="checkbox" id="pt_check" />
-                        <span class="slider round"></span>
-                      </label>
-                    </div>
-                  </div>
-                </div>
-              </form>
+              <div class="feature">
+                <img
+                  src="https://internshala.com/static/images/common/check_box.svg"
+                />
+                <h4>Fresher Jobs</h4>
+              </div>
+              <div class="feature">
+                <img
+                  src="https://internshala.com/static/images/common/check_box.svg"
+                />
+                <h4>Work from home jobs</h4>
+              </div>
             </div>
           </div>
         </div>
+        <div id="regestration_container_right">
+          <div id="google_button_container">
+            <div id="google_img_container">
+              <img
+                src="https://internshala.com/static/images/login/google_logo.png"
+              />
+            </div>
+            <div id="google_content"><a href="#">Signup With Google</a></div>
+          </div>
+          <!-- <form action="/users" method="POST"> -->
+          <div id="form_container">
+            <div class="helper">
+              <div id="google_or"><p>OR</p></div>
+            </div>
 
-        <!-- For right side internships -->
-        <div id="list_container">
-          <div id="for_dom"></div>
+            <label for="email">Email</label>
+            <input
+              id="email"
+              name="email"
+              placeholder=" John@xyz.com"
+              class="reg_fields"
+            />
+            <label for="password">Password</label>
+            <input
+              id="password"
+              name="password"
+              placeholder=" Set a password"
+              class="reg_fields"
+              type="password"
+            />
+
+            <label for="firstname">First name</label>
+            <input
+              id="firstname"
+              name="firstname"
+              placeholder=" Your first name"
+              class="reg_fields"
+            />
+            <label for="lastname">Last name</label>
+            <input
+              id="lastname"
+              name="lastname"
+              placeholder=" Your last name"
+              class="reg_fields"
+            />
+
+            <p>
+              By signing up you agree to
+              <span><a href="#">Terms and Conditions</a></span>
+            </p>
+            <button id="signup_btn" type="submit">Signup</button>
+
+            <p>
+              Already Registered ?
+              <span><a href="students_log.ejs">Login</a></span>
+            </p>
+          </div>
+          <!-- </form> -->
         </div>
       </div>
     </div>
@@ -316,4 +309,5 @@
     </div>
   </body>
 </html>
-<script src="../js/body.js"></script>
+
+<script src="/static/js/students_reg.js"></script>

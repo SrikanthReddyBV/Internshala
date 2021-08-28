@@ -5,7 +5,7 @@
       src="https://kit.fontawesome.com/a13b999530.js"
       crossorigin="anonymous"
     ></script>
-    <link rel="stylesheet" href="../css/main.css" />
+    <link rel="stylesheet" href="/static/css/main.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -13,22 +13,27 @@
       rel="stylesheet"
     />
     <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
-    <link rel="stylesheet" href="../css/nev_bar_style.css" />
-    <link rel="stylesheet" href="../css/pop.css" />
+    <link rel="stylesheet" href="/static/css/nev_bar_style.css" />
+
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" href="https://internshala.com//favicon.ico?v=5" />
-    <title>Internshala|login</title>
+    <title>Internships</title>
+    <style></style>
   </head>
   <body>
-    <!-- header/nav bar -->
+    <!-- Header -->
 
     <header>
-      <a class="logo" href="../index.html">
+      <a class="logo" href="index.ejs">
         <img
           class="logo"
           src="https://internshala.com/static/images/common/new_internshala_logo.svg"
@@ -36,9 +41,9 @@
         />
       </a>
       <nav>
-        <ul class="nav_links" id="navigationkkk">
+        <ul class="nav_links">
           <li>
-            <a href="internships.html">Internships</a>
+            <a href="internships.ejs">Internships</a>
           </li>
           <li>
             <a href="#">Online Training <span id="headOffer">OFFER</span></a>
@@ -48,60 +53,109 @@
           </li>
         </ul>
       </nav>
-      <a href="students_log.html" id="cta">
+      <a href="students_log.ejs" id="cta">
         <button class="headingbutton">Login</button></a
       >
-      <a href="students_reg.html" id="cta1">
+      <a href="students_reg.ejs" id="cta1">
         <button class="headingbutton" id="register">Register</button></a
       >
     </header>
-    <!--         This is body of Login page        -->
-    <div style="margin-top: 30px"></div>
-    <div class="max-width-container">
-      <div class="login_wrap" id="login_container">
-        <!-- Google login -->
-        <div id="google_button_container">
-          <div id="google_img_container">
-            <img
-              src="https://internshala.com/static/images/login/google_logo.png"
-            />
+
+    <!-- End of Header -->
+
+    <!-- Body Content for Internships page  -->
+
+    <div id="internship_heading">
+      <h4 style="text-align: left">Total Internships</h4>
+    </div>
+
+    <div id="max-width-container">
+      <div id="reference">
+        <div id="search_criteria_container">
+          <div id="filters">
+            <div id="form_container">
+              <div id="filter_logo">
+                <i class="fas fa-filter"></i>
+                <span>Filters</span>
+              </div>
+
+              <form id="search_form">
+                <!-- Category Selector -->
+                <div class="category_container">
+                  <label for="select_category">Category</label>
+                  <div id="category_options">
+                    <select
+                      id="select_category"
+                      name="select_category"
+                      data-placeholder="e.g Marketing"
+                      class="form_control"
+                    >
+                      <% domains.forEach((el)=>{ %>
+                      <option value="<%= el.domain.substring(0,20) %>">
+                        <%= el.domain.substr(0,20) %>
+                      </option>
+                      <% }) %>
+                    </select>
+                  </div>
+                </div>
+
+                <!-- City selector -->
+
+                <div class="category_container">
+                  <label for="select_city">City</label>
+                  <div id="city_options">
+                    <select
+                      id="select_city"
+                      name="select_city"
+                      data-placeholder="e.g Mumbai"
+                      class="form_control"
+                    >
+                      <% locations.forEach((el)=>{ %>
+                      <option value="<%= el.city %>"><%= el.city %></option>
+                      <% }) %>
+                    </select>
+                  </div>
+                </div>
+
+                <!-- Check box - 1 -->
+
+                <div class="filters_checkboxes">
+                  <div class="flex_row">
+                    <label for="work_from_home">Work from home</label>
+                    <div class="switch_container">
+                      <!-- Rounded switch -->
+                      <label class="switch">
+                        <input type="checkbox" id="wfh_check" />
+                        <span class="slider round"></span>
+                      </label>
+                    </div>
+
+                    <!-- Checkbox - 2 -->
+                  </div>
+                  <div class="flex_row">
+                    <label for="part_time">Part time</label>
+                    <div class="switch_container">
+                      <!-- Rounded switch -->
+                      <label class="switch">
+                        <input type="checkbox" id="pt_check" />
+                        <span class="slider round"></span>
+                      </label>
+                    </div>
+                  </div>
+                </div>
+              </form>
+            </div>
           </div>
-          <div id="google_content"><a href="#">Signup With Google</a></div>
         </div>
 
-        <!-- Rest of the fields -->
-        <div id="form_container">
-          <div class="helper">
-            <div id="google_or"><p>OR</p></div>
-          </div>
-          <label for="email">Email</label>
-          <input
-            id="email"
-            name="email"
-            placeholder=" John@xyz.com"
-            class="reg_fields"
-          />
-          <label for="password">Password</label>
-          <input
-            id="password"
-            name="password"
-            placeholder=" Enter password"
-            class="reg_fields"
-            type="password"
-          />
-
-          <p>
-            <span><a href="#">Forgot password ?</a></span>
-          </p>
-          <button id="login_btn">Login</button>
-          <p>
-            New to Internshala ?
-            <span><a href="students_reg.html">Signup</a></span>
-          </p>
+        <!-- For right side internships -->
+        <div id="list_container">
+          <div id="for_dom"></div>
         </div>
-        <!-- End of Rest of the fields -->
       </div>
     </div>
+
+    <!-- <div class="emptydiv"></div> -->
 
     <!-- ----------------- Footer Starts from here ------------------------- -->
 
@@ -259,23 +313,6 @@
         </div>
       </div>
     </div>
-
-    <!-- For pop -->
-
-    <div class="popup">
-      <div class="close-btn">&times;</div>
-      <div class="form">
-        <h2>Drop your resume</h2>
-        <div class="form-element">
-          <input type="file" id="resume" placeholder="Choose file" />
-        </div>
-        <div class="form-element">
-          <button id="resume_submit">Submit</button>
-        </div>
-      </div>
-    </div>
-
-    <!--  -->
   </body>
 </html>
-<script src="../js/students_log.js"></script>
+<script src="/static/js/body.js"></script>

@@ -8,7 +8,7 @@ applynow.addEventListener("click", function () {
 });
 
 signout.addEventListener("click", function () {
-  window.location.href = "../index.html";
+  window.location.href = "index.ejs";
 });
 
 function popnow() {
@@ -22,7 +22,7 @@ function popnow() {
   // test
   let resume_submit = document.getElementById("home_page");
   resume_submit.addEventListener("click", function () {
-    window.location.href = "../index.html";
+    window.location.href = "index.ejs";
   });
 }
 function setName() {
@@ -38,7 +38,7 @@ function setName() {
   let signout = document.createElement("li");
   let addItInNevbar = document.getElementById("navigationkkk");
 
-  anc1.href = "../index.html";
+  anc1.href = "index.ejs";
   name.innerHTML = getName[0];
   signout.innerHTML = "Sign Out";
   anc1.append(signout);

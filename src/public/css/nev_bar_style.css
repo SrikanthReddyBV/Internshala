@@ -132,7 +132,7 @@ button {
 .slide {
   justify-content: center;
   align-items: center;
-
+  margin: auto;
   margin-top: 180px !important;
 }
 #button1 {
@@ -157,4 +157,14 @@ button {
 }
 #button1:hover {
   box-shadow: 0.25px 0.5px 5px 2.5px rgb(165, 165, 165);
+}
+
+.register_btn {
+  background-color: #008bdc;
+}
+
+.register_btn:focus,
+.register_btn:hover {
+  box-shadow: none !important;
+  background-color: #008bdc;
 }

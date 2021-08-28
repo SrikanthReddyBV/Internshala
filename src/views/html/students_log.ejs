@@ -5,8 +5,7 @@
       src="https://kit.fontawesome.com/a13b999530.js"
       crossorigin="anonymous"
     ></script>
-
-    <link rel="stylesheet" href="../css/main.css" />
+    <link rel="stylesheet" href="/static/css/main.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -17,16 +16,19 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
-    <link rel="stylesheet" href="../css/nev_bar_style.css" />
+    <link rel="stylesheet" href="/static/css/nev_bar_style.css" />
+    <link rel="stylesheet" href="/static/css/pop.css" />
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <link rel="icon" href="https://internshala.com//favicon.ico?v=5" />
+    <title>Internshala|login</title>
   </head>
   <body>
     <!-- header/nav bar -->
+
     <header>
-      <a class="logo" href="../index.html">
+      <a class="logo" href="index.ejs">
         <img
           class="logo"
           src="https://internshala.com/static/images/common/new_internshala_logo.svg"
@@ -34,9 +36,9 @@
         />
       </a>
       <nav>
-        <ul class="nav_links">
+        <ul class="nav_links" id="navigationkkk">
           <li>
-            <a href="internships.html">Internships</a>
+            <a href="internships.ejs">Internships</a>
           </li>
           <li>
             <a href="#">Online Training <span id="headOffer">OFFER</span></a>
@@ -46,105 +48,58 @@
           </li>
         </ul>
       </nav>
-      <a href="students_log.html" id="cta">
+      <a href="students_log.ejs" id="cta">
         <button class="headingbutton">Login</button></a
       >
-      <a href="students_reg.html" id="cta1">
+      <a href="students_reg.ejs" id="cta1">
         <button class="headingbutton" id="register">Register</button></a
       >
     </header>
-
-    <!--         This is body of signup page        -->
+    <!--         This is body of Login page        -->
     <div style="margin-top: 30px"></div>
     <div class="max-width-container">
-      <div id="regestration_container">
-        <div id="regestration_container_left">
-          <div class="regestration_content">
-            <div class="heading_0">
-              A
-              <span id="freetext">Free</span>
-              ride to your dream career
-              <h3>Register and apply to 10000+ opportunities</h3>
-            </div>
-
-            <div class="features_container">
-              <div class="feature">
-                <img
-                  src="https://internshala.com/static/images/common/check_box.svg"
-                />
-                <h4>Internships</h4>
-              </div>
-              <div class="feature">
-                <img
-                  src="https://internshala.com/static/images/common/check_box.svg"
-                />
-                <h4>Fresher Jobs</h4>
-              </div>
-              <div class="feature">
-                <img
-                  src="https://internshala.com/static/images/common/check_box.svg"
-                />
-                <h4>Work from home jobs</h4>
-              </div>
-            </div>
+      <div class="login_wrap" id="login_container">
+        <!-- Google login -->
+        <div id="google_button_container">
+          <div id="google_img_container">
+            <img
+              src="https://internshala.com/static/images/login/google_logo.png"
+            />
           </div>
+          <div id="google_content"><a href="#">Signup With Google</a></div>
         </div>
-        <div id="regestration_container_right">
-          <div id="google_button_container">
-            <div id="google_img_container">
-              <img
-                src="https://internshala.com/static/images/login/google_logo.png"
-              />
-            </div>
-            <div id="google_content"><a href="#">Signup With Google</a></div>
+
+        <!-- Rest of the fields -->
+        <div id="form_container">
+          <div class="helper">
+            <div id="google_or"><p>OR</p></div>
           </div>
+          <label for="email">Email</label>
+          <input
+            id="email"
+            name="email"
+            placeholder=" John@xyz.com"
+            class="reg_fields"
+          />
+          <label for="password">Password</label>
+          <input
+            id="password"
+            name="password"
+            placeholder=" Enter password"
+            class="reg_fields"
+            type="password"
+          />
 
-          <div id="form_container">
-            <div class="helper">
-              <div id="google_or"><p>OR</p></div>
-            </div>
-            <label for="email">Email</label>
-            <input
-              id="email"
-              name="email"
-              placeholder=" John@xyz.com"
-              class="reg_fields"
-            />
-            <label for="password">Password</label>
-            <input
-              id="password"
-              name="password"
-              placeholder=" Set a password"
-              class="reg_fields"
-              type="password"
-            />
-
-            <label for="firstname">First name</label>
-            <input
-              id="firstname"
-              name="firstname"
-              placeholder=" Your first name"
-              class="reg_fields"
-            />
-            <label for="lastname">Last name</label>
-            <input
-              id="lastname"
-              name="lastname"
-              placeholder=" Your last name"
-              class="reg_fields"
-            />
-
-            <p>
-              By signing up you agree to
-              <span><a href="#">Terms and Conditions</a></span>
-            </p>
-            <button id="signup_btn">Signup</button>
-            <p>
-              Already Registered ?
-              <span><a href="students_log.html">Login</a></span>
-            </p>
-          </div>
+          <p>
+            <span><a href="#">Forgot password ?</a></span>
+          </p>
+          <button id="login_btn">Login</button>
+          <p>
+            New to Internshala ?
+            <span><a href="students_reg.ejs">Signup</a></span>
+          </p>
         </div>
+        <!-- End of Rest of the fields -->
       </div>
     </div>
 
@@ -304,7 +259,23 @@
         </div>
       </div>
     </div>
+
+    <!-- For pop -->
+
+    <div class="popup">
+      <div class="close-btn">&times;</div>
+      <div class="form">
+        <h2>Drop your resume</h2>
+        <div class="form-element">
+          <input type="file" id="resume" placeholder="Choose file" />
+        </div>
+        <div class="form-element">
+          <button id="resume_submit">Submit</button>
+        </div>
+      </div>
+    </div>
+
+    <!--  -->
   </body>
 </html>
-
-<script src="../js/students_reg.js"></script>
+<script src="/static/js/students_log.js"></script>

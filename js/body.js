@@ -1,199 +1,3 @@
-var ArrData = [
-  {
-    amount: "15000",
-    domain: "Marketing",
-    duration: "6",
-    image:
-      "https://internshala.com/cached_uploads/logo%2F60cae5b38ab861623909811.jpg",
-    location: "Hydrabad",
-    name: "Emoha Eldercare",
-  },
-  {
-    amount: "25000",
-    domain: "Accounts",
-    duration: "8",
-    image:
-      "https://internshala.com/cached_uploads/logo%2F60ccb12d8681a1624027437.jpg",
-    location: "Bengaluru",
-    name: "Medini Research & Analytics",
-  },
-  {
-    amount: "12000",
-    domain: "Web Development",
-    duration: "4",
-    image:
-      "https://internshala.com/cached_uploads/logo%2F60f92304d99bf1626940164.jpeg",
-    location: "Chennai",
-    name: "Speqto Technologies",
-  },
-  {
-    amount: "11000",
-    domain: "Data Science",
-    duration: "9",
-    image:
-      "https://internshala.com/cached_uploads/logo%2F5e2fdd3645dbd1580195126.png",
-    location: "Mumbai",
-    name: "Stotra Media",
-  },
-  {
-    amount: "13000",
-    domain: "Android Development",
-    duration: "4",
-    image:
-      "https://internshala.com/cached_uploads/logo%2F5e2fdec6dd76d1580195526.jpg",
-    location: "Delhi",
-    name: "Spiety Technologies",
-  },
-  {
-    amount: "13000",
-    domain: "Big Data",
-    duration: "4",
-    image:
-      "https://internshala.com/cached_uploads/logo%2F5e2fde740bf911580195444.jpg",
-    location: "Pune",
-    name: "Snooplay",
-  },
-  {
-    amount: "13000",
-    domain: "Accounts",
-    duration: "4",
-    image:
-      "https://internshala.com/cached_uploads/logo%2F5fbe45bf4ad171606305215.png",
-    location: "Pune",
-    name: "Unico",
-  },
-  {
-    amount: "14000",
-    domain: "Data Science",
-    duration: "5",
-    image:
-      "https://internshala.com/cached_uploads/logo%2F603a1f70482f41614421872.png",
-    location: "Pune",
-    name: "Perfect Digital Solution",
-  },
-  {
-    amount: "25000",
-    domain: "Web Development",
-    duration: "11",
-    image:
-      "https://internshala.com/cached_uploads/logo%2F60013d423b4c21610693954.png",
-    location: "Delhi",
-    name: "Quantum Learnings",
-  },
-  {
-    amount: "7000",
-    domain: "Web Development",
-    duration: "11",
-    image:
-      "https://internshala.com/cached_uploads/logo%2F5e2fddf3b08e21580195315.jpeg",
-    location: "Delhi",
-    name: "Ladder India",
-    type: "work from home",
-  },
-  {
-    amount: "7000",
-    domain: "Data Science",
-    duration: "5",
-    image:
-      "https://internshala.com/cached_uploads/logo%2F604862c5e22a21615356613.png",
-    location: "Pune",
-    name: "Digitise Today",
-    type: "part time",
-  },
-  {
-    amount: "10000",
-    domain: "Accounts",
-    duration: "8",
-    image:
-      "https://internshala.com/cached_uploads/logo%2F60f7dd3ec1b4b1626856766.png",
-    location: "Delhi",
-    name: "Dough & Cream",
-  },
-  {
-    amount: "9000",
-    domain: "Web Development",
-    duration: "5",
-    image:
-      "https://internshala.com/cached_uploads/logo%2F5e2fddc2d52a51580195266.png",
-    location: "Bengaluru",
-    name: "Dignity Software Private Limited",
-  },
-  {
-    amount: "19000",
-    domain: "Data Science",
-    duration: "8",
-    image:
-      "https://internshala.com/cached_uploads/logo%2F5e2fde1cab65f1580195356.png",
-    location: "Bengaluru",
-    name: "Insurgics Health Solution",
-  },
-  {
-    amount: "8000",
-    domain: "Web Development",
-    duration: "5",
-    image:
-      "https://internshala.com/cached_uploads/logo%2F60f6fc54d63161626799188.png",
-    location: "Chennai",
-    name: "Lone Ranger India",
-  },
-  {
-    amount: "9000",
-    domain: "Web Development",
-    duration: "9",
-    image:
-      "https://internshala.com/cached_uploads/logo%2F60f6f5278c8b41626797351.png",
-    location: "Hydrabad",
-    name: "IoTrue Micro Solutions",
-  },
-  {
-    amount: "7000",
-    domain: "Accounts",
-    duration: "7",
-    image:
-      "https://internshala.com/cached_uploads/logo%2F60f56b0c043221626696460.png",
-    location: "Bengaluru",
-    name: "Doctor On Call Private Limited",
-  },
-  {
-    amount: "1000",
-    domain: "Accounts",
-    duration: "4",
-    image:
-      "https://internshala.com/cached_uploads/logo%2F60c883cd937ee1623753677.jpg",
-    location: "Mumbai",
-    name: "Geek Pictures Private Limited",
-  },
-  {
-    amount: "7000",
-    domain: "Android Development",
-    duration: "8",
-    image:
-      "https://internshala.com/cached_uploads/logo%2F5e2fdedf15b561580195551.png",
-    location: "Mumbai",
-    name: "Oddy Labs",
-    type: "part time",
-  },
-  {
-    amount: "8900",
-    domain: "Accounts",
-    duration: "4",
-    image:
-      "https://internshala.com/cached_uploads/logo%2F5e099a48dd88a1577687624.jpg",
-    location: "Bengaluru",
-    name: "BASCA Motor Works LLP",
-  },
-];
-// pushed in localstorage
-localStorage.setItem("dataOfPage", JSON.stringify(ArrData));
-
-function filterCity(el) {
-  return el.location == selected_city.value;
-}
-
-function filterDomain(el) {
-  return el.domain == "Web Development";
-}
-
 function apiData() {
   fetch("http://localhost:2345/internships")
     .then((res) => res.json())
@@ -272,11 +76,11 @@ work_outline
       lastDivView.append(workFromHome, partTime, viewdetails_down);
     } else if (data[i].wfh) {
       workFromHome.innerHTML = `<span class="material-icons ">home_work</span>`;
-      partTime.innerHTML = `<span class="material-icons">work</span>`;
+      partTime.innerHTML = `<span class="material-icons">work </span>`;
       lastDivView.append(workFromHome, partTime, viewdetails_down);
     } else {
       partTime.innerHTML = `<span class="material-icons">
-work_outline
+work_outline 
 </span>`;
       lastDivView.append(partTime, viewdetails_down);
     }
@@ -356,78 +160,41 @@ function showRightSideContent() {
     });
 }
 
-//showContent(JSON.parse(localStorage.getItem("dataOfPage")));
+function changeTo(arr) {
+  return arr.split("");
+}
 
-// // pushed
-// let data2 = JSON.parse(localStorage.getItem("dataOfPage"));
-// var city = document.getElementById("select_city");
-// city.addEventListener("change", showRightSideContent);
-// var domain = document.getElementById("select_category");
-// domain.addEventListener("change", showRightSideContent);
+function mergeAgain(input) {
+  return input.join("");
+}
 
-// var wfm_check = document.getElementById("wfh_check");
-// var pt_check = document.getElementById("pt_check");
+function changeCase(input) {
+  let arr = input.split(" ");
+  let arr1 = arr.map(changeTo);
 
-// var x = Math.round(Math.random() * 500);
-
-// wfm_check.addEventListener("change", () => {
-//   let wfm_data = data2.filter((el) => {
-//     return el.type == "work from home";
-//   });
-//   if (wfm_check.checked) {
-//     showContent(wfm_data);
-//     total_internships.innerText = `Total internships : ${wfm_data.length}`;
-//   } else {
-//     showContent(data2);
-//     total_internships.innerText = `Total internships : ${data2.length}`;
-//   }
-// });
-// pt_check.addEventListener("change", () => {
-//   let pt_data = data2.filter((el) => {
-//     return el.type == "part time";
-//   });
-
-//   if (pt_check.checked) {
-//     showContent(pt_data);
-//     total_internships.innerText = `Total internships : ${pt_data.length}`;
-//   } else {
-//     showContent(data2);
-//     total_internships.innerText = `Total internships : ${data2.length}`;
-//   }
-// });
-
-// function showRightSideContent() {
-//   let selectedOption = city.value;
-//   let selectDomain = domain.value;
-
-//   let data = JSON.parse(localStorage.getItem("dataOfPage"));
-//   let mod = data.filter(function filterDomain(el) {
-//     return el.domain == selectDomain;
-//   });
-
-//   showContent(mod);
-
-//   let modified = mod.filter(function filterCity(el) {
-//     return el.location == selectedOption;
-//   });
-//   if (wfm_check.checked || pt_check.checked) {
-//     modified.pop();
-//   }
-
-//   showContent(modified);
-//   total_internships.innerText = `Total internships : ${modified.length}`;
-// }
-
-// for testing purpose only. edit made by srikanth
+  for (let i = 0; i < arr1.length; i++) {
+    for (let j = 0; j < arr1[i].length; j++) {
+      if (arr1[i][0].toUpperCase() != arr1[i][0]) {
+        arr1[i][0] = arr1[i][0].toUpperCase();
+      } else {
+        arr1[i][j] = arr1[i][j].toLowerCase();
+      }
+    }
+  }
+  return arr1.map(mergeAgain).join(" ");
+}
 
 if (localStorage.getItem("homesearch") != null) {
   let e = JSON.parse(localStorage.getItem("homesearch"));
+
+  let str = changeCase(e);
+  console.log("str:", str);
 
   fetch("http://localhost:2345/internships")
     .then((res) => res.json())
     .then((data) => {
       let modified = data.filter(function (el) {
-        return el.city.city == e || el.domain.domain == e;
+        return el.city.city == str || el.domain.domain == str;
       });
       showContent(modified);
     });

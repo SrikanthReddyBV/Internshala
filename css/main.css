@@ -98,6 +98,32 @@ body {
 .form_control {
   display: block;
 }
+#bodybox {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+  margin-bottom: 24px;
+}
+#box {
+  display: flex;
+  justify-content: center;
+  border: 1px solid black;
+  border-radius: 5px;
+  width: 30vw;
+  height: 45vh;
+  margin-top: 0px;
+  flex-direction: column;
+  border-color: rgb(235, 229, 229);
+}
+#button {
+  justify-content: center;
+  width: 200px;
+  height: 32px;
+  margin-left: 20px;
+
+  margin-bottom: 10px;
+}
+
 
 #regestration_container {
   display: flex;

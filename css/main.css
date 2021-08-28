@@ -123,6 +123,23 @@ body {
 
   margin-bottom: 10px;
 }
+#circle {
+  width: 100px;
+  height: 100px;
+  border-radius: 50px;
+  border: 1px solid black;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#resks {
+  width: 455px;
+  height: 36px;
+  border: 2px solid black;
+  border-radius: 5px;
+  border-color: rgb(134, 134, 134);
+}
 
 
 #regestration_container {

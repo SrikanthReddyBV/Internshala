@@ -25,6 +25,7 @@ This is a clone of Internshal website. Internshala is an internship and online t
 ## Features buit
 
 - Implimented dynamic search bar on home page
+- Realtime internships fetched from MongoDB
 - Filters functionality for internships page
 - Signup/Login functionality by using MongoDB
 - Dynamic "View details" page for each internship
@@ -35,3 +36,14 @@ This is a clone of Internshal website. Internshala is an internship and online t
 - [Badvel Venkata Srikanth Reddy](https://github.com/SrikanthReddyBV)
 - [Krishna Kumar Keshri](https://github.com/KrishnaKumarKeshri96)
 - [Sarvesh Kumar Sharma](https://github.com/SARVESHSHARMA-SKS)
+
+## How to use our app?
+- Install git on your machine
+- Clone our repository by running the command ``` git clone https://github.com/SrikanthReddyBV/Internshala.git ```
+- Change directory to Internshala by running ``` cd Internshala ```
+- And then run following two commands
+- ``` npm install ```
+- ``` npm start ```
+- Open your browser and go to  ``` http://localhost:2222/pages/index.ejs ```
+- Or by skipping above steps
+  simply goto https://blooming-bastion-29120.herokuapp.com/pages/index.ejs 

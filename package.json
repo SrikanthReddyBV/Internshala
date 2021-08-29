@@ -11,7 +11,8 @@
   "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "server": "nodemon src/server"
+    "server": "nodemon src/server",
+    "start": "node src/server"
   },
   "keywords": [],
   "author": "",

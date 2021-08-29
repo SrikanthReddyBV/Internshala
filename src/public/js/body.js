@@ -160,40 +160,40 @@ function showRightSideContent() {
     });
 }
 
-function changeTo(arr) {
-  return arr.split("");
-}
+// function changeTo(arr) {
+//   return arr.split("");
+// }
 
-function mergeAgain(input) {
-  return input.join("");
-}
+// function mergeAgain(input) {
+//   return input.join("");
+// }
 
-function changeCase(input) {
-  let arr = input.split(" ");
-  let arr1 = arr.map(changeTo);
+// function changeCase(input) {
+//   let arr = input.split(" ");
+//   let arr1 = arr.map(changeTo);
 
-  for (let i = 0; i < arr1.length; i++) {
-    for (let j = 0; j < arr1[i].length; j++) {
-      if (arr1[i][0].toUpperCase() != arr1[i][0]) {
-        arr1[i][0] = arr1[i][0].toUpperCase();
-      } else {
-        arr1[i][j] = arr1[i][j].toLowerCase();
-      }
-    }
-  }
-  return arr1.map(mergeAgain).join(" ");
-}
+//   for (let i = 0; i < arr1.length; i++) {
+//     for (let j = 0; j < arr1[i].length; j++) {
+//       if (arr1[i][0].toUpperCase() != arr1[i][0]) {
+//         arr1[i][0] = arr1[i][0].toUpperCase();
+//       } else {
+//         arr1[i][j] = arr1[i][j].toLowerCase();
+//       }
+//     }
+//   }
+//   return arr1.map(mergeAgain).join(" ");
+// }
 
 if (localStorage.getItem("homesearch") != null) {
   let e = JSON.parse(localStorage.getItem("homesearch"));
 
-  let str = changeCase(e);
+  let str = e.toLowerCase();
 
   fetch("http://localhost:2222/data")
     .then((res) => res.json())
     .then((data) => {
       let modified = data.filter(function (el) {
-        return el.city.city == str || el.domain.domain == str;
+        return el.city.city.toLowerCase() == str || el.domain.domain.toLowerCase() == str;
       });
       showContent(modified);
     });
